@@ -3,7 +3,7 @@
 using Dysnomia.Common.BlizzardWebAPI.Models;
 
 namespace Dysnomia.Common.BlizzardWebAPI {
-	public class StarcraftCommunity : BlizzardWebAPIQuerier, IStarcraftCommunity {
+	public class LegacyStarcraftCommunity : BlizzardWebAPIQuerier, ILegacyStarcraftCommunity {
 		/// <summary>
 		/// Retrieves data about an individual SC2 profile.
 		/// </summary>
@@ -13,8 +13,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
 		/// <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
 		/// <returns></returns>
-		public async Task<SC2PlayerProfile> GetPlayerProfile(string accessToken, string region, int regionId, int realmId, ulong profileId) {
-			return await this.Get<SC2PlayerProfile>(
+		public async Task<LegacySC2PlayerProfile> GetPlayerProfile(string accessToken, string region, int regionId, int realmId, ulong profileId) {
+			return await this.Get<LegacySC2PlayerProfile>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/legacy/profile/{1}/{2}/{3}?access_token={4}",
 					region, regionId, realmId, profileId, accessToken
