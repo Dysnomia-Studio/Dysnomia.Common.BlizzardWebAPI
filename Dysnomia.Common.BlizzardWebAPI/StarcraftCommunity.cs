@@ -23,5 +23,24 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 				)
 			);
 		}
+
+		/// <summary>
+		/// Returns metadata for an individual's profile.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <param name="realmId">Realm Id (1/2)</param>
+		/// <param name="profileId">The profile ID</param>
+		/// <param name="locale">The locale to reflect in localized data.</param>
+		/// <returns></returns>
+		public async Task<StarcraftMetadataProfile> GetMetadataProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
+			return await this.Get<StarcraftMetadataProfile>(
+				string.Format(
+					"https://{0}.api.blizzard.com/sc2/metadata/profile/{1}/{2}/{3}?locale={4}&access_token={5}",
+					region, regionId, realmId, profileId, locale, accessToken
+				)
+			);
+		}
 	}
 }

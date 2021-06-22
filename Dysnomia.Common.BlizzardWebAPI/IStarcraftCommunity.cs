@@ -15,6 +15,18 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="regionId">The region for the profile</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public Task<StarcraftStaticProfile> GetStaticProfile(string accessToken, string region, int regionId, string locale = "en_US");
+		Task<StarcraftStaticProfile> GetStaticProfile(string accessToken, string region, int regionId, string locale = "en_US");
+
+		/// <summary>
+		/// Returns metadata for an individual's profile.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <param name="realmId">Realm Id (1/2)</param>
+		/// <param name="profileId">The profile ID</param>
+		/// <param name="locale">The locale to reflect in localized data.</param>
+		/// <returns></returns>
+		Task<StarcraftMetadataProfile> GetMetadataProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US");
 	}
 }
