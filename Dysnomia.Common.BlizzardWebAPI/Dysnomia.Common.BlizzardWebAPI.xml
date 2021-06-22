@@ -4,6 +4,11 @@
         <name>Dysnomia.Common.BlizzardWebAPI</name>
     </assembly>
     <members>
+        <member name="T:Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraftCommunity">
+            <summary>
+            See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
+            </summary>
+        </member>
         <member name="M:Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraftCommunity.GetPlayerProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64)">
             <summary>
             Retrieves data about an individual SC2 profile.
@@ -15,6 +20,11 @@
             <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <returns></returns>
         </member>
+        <member name="T:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity">
+            <summary>
+            See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
+            </summary>
+        </member>
         <member name="M:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity.GetPlayerProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64)">
             <summary>
             Retrieves data about an individual SC2 profile.
@@ -25,6 +35,11 @@
             <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <returns></returns>
+        </member>
+        <member name="T:Dysnomia.Common.BlizzardWebAPI.TokenQuerier">
+            <summary>
+            See https://develop.battle.net/documentation/guides/using-oauth
+            </summary>
         </member>
         <member name="M:Dysnomia.Common.BlizzardWebAPI.TokenQuerier.GetClientCredentialFlow">
             <summary>

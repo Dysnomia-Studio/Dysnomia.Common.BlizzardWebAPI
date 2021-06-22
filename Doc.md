@@ -18,6 +18,10 @@
 
 Dysnomia.Common.BlizzardWebAPI
 
+##### Summary
+
+See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
+
 <a name='M-Dysnomia-Common-BlizzardWebAPI-ILegacyStarcraftCommunity-GetPlayerProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64-'></a>
 ### GetPlayerProfile(accessToken,region,regionId,realmId,profileId) `method`
 
@@ -46,6 +50,10 @@ Retrieves data about an individual SC2 profile.
 
 Dysnomia.Common.BlizzardWebAPI
 
+##### Summary
+
+See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
+
 <a name='M-Dysnomia-Common-BlizzardWebAPI-LegacyStarcraftCommunity-GetPlayerProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64-'></a>
 ### GetPlayerProfile(accessToken,region,regionId,realmId,profileId) `method`
 
@@ -73,6 +81,10 @@ Retrieves data about an individual SC2 profile.
 ##### Namespace
 
 Dysnomia.Common.BlizzardWebAPI
+
+##### Summary
+
+See https://develop.battle.net/documentation/guides/using-oauth
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-TokenQuerier-GetAuthorizationCodeFlow-System-String,System-String-'></a>
 ### GetAuthorizationCodeFlow(authorization_code,scope) `method`

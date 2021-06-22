@@ -8,6 +8,9 @@ using Dysnomia.Common.BlizzardWebAPI.Models;
 using Dysnomia.Common.WebAPIWrapper;
 
 namespace Dysnomia.Common.BlizzardWebAPI {
+	/// <summary>
+	/// See https://develop.battle.net/documentation/guides/using-oauth
+	/// </summary>
 	public class TokenQuerier : WebAPIQuerier {
 		private readonly string clientId;
 		private readonly string clientSecret;
