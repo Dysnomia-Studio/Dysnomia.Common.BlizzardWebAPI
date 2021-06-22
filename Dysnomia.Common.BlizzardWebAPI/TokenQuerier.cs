@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
@@ -27,19 +27,20 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// </summary>
 		/// <returns>Access token response</returns>
 		public async Task<AccessTokenResponse> GetClientCredentialFlow() {
-			using (var client = new HttpClient()) {
+			using var client = new HttpClient();
+			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+				Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(string.Format("{0}:{1}", clientId, clientSecret)))
+			);
 
-				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", string.Format("{0}:{1}", clientId, clientSecret));
+			using var content = new MultipartFormDataContent();
+			content.Add(new StringContent("client_credentials"), "grant_type");
 
-				var res = await client.PostAsync(
-					string.Format("https://{0}.battle.net/oauth/token", this.region),
-					new FormUrlEncodedContent(new Dictionary<string, string>() {
-						{ "grant_type", "client_credentials" },
-					})
-				);
+			var res = await client.PostAsync(
+				string.Format("https://{0}.battle.net/oauth/token", this.region),
+				content
+			);
 
-				return JsonSerializer.Deserialize<AccessTokenResponse>(await res.Content.ReadAsStringAsync());
-			}
+			return JsonSerializer.Deserialize<AccessTokenResponse>(await res.Content.ReadAsStringAsync());
 		}
 
 		/// <summary>
@@ -50,22 +51,23 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="scope">The scopes needed for the access token. Note that this can be fewer scopes than the authorization.</param>
 		/// <returns>Access token response</returns>
 		public async Task<AccessTokenResponse> GetAuthorizationCodeFlow(string authorization_code, string scope = "wow.profile,sc2.profile,d3.profile,openid") {
-			using (var client = new HttpClient()) {
+			using var client = new HttpClient();
+			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
+				Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(string.Format("{0}:{1}", clientId, clientSecret)))
+			);
 
-				client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", string.Format("{0}:{1}", clientId, clientSecret));
+			using var content = new MultipartFormDataContent();
+			content.Add(new StringContent(redirectURI), "redirect_uri");
+			content.Add(new StringContent(scope), "scope");
+			content.Add(new StringContent(authorization_code), "code");
+			content.Add(new StringContent("authorization_code"), "grant_type");
 
-				var res = await client.PostAsync(
-					string.Format("https://{0}.battle.net/oauth/token", this.region),
-					new FormUrlEncodedContent(new Dictionary<string, string>() {
-						{ "redirect_uri", redirectURI },
-						{ "scope", scope },
-						{ "code", authorization_code },
-						{ "grant_type", "authorization_code" },
-					})
-				);
+			var res = await client.PostAsync(
+				string.Format("https://{0}.battle.net/oauth/token", this.region),
+				content
+			);
 
-				return JsonSerializer.Deserialize<AccessTokenResponse>(await res.Content.ReadAsStringAsync());
-			}
+			return JsonSerializer.Deserialize<AccessTokenResponse>(await res.Content.ReadAsStringAsync());
 		}
 	}
 }
