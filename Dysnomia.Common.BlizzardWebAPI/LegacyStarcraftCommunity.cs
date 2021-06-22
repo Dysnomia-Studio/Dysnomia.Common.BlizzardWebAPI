@@ -7,7 +7,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <summary>
 		/// Retrieves data about an individual SC2 profile.
 		/// </summary>
-		/// <param name="accessToken">Authorization Code Flow access token</param>
+		/// <param name="accessToken">Credential Code Flow access token</param>
 		/// <param name="region">StarCraft II community APIs use the region parameter to set the host region in the Try It feature. Note: {region} does not affect StarCraft II responses, which use the :regionId parameter in requests.</param>
 		/// <param name="regionId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
 		/// <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>

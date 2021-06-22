@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Dysnomia.Common.BlizzardWebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraftCommunity.GetPlayerProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64)">
+            <summary>
+            Retrieves data about an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">StarCraft II community APIs use the region parameter to set the host region in the Try It feature. Note: {region} does not affect StarCraft II responses, which use the :regionId parameter in requests.</param>
+            <param name="regionId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity.GetPlayerProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64)">
+            <summary>
+            Retrieves data about an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">StarCraft II community APIs use the region parameter to set the host region in the Try It feature. Note: {region} does not affect StarCraft II responses, which use the :regionId parameter in requests.</param>
+            <param name="regionId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.TokenQuerier.GetClientCredentialFlow">
+            <summary>
+            The OAuth client credentials flow is used to exchange a pair of client credentials (client_id and client_secret) for an access token.
+            https://develop.battle.net/documentation/guides/using-oauth/client-credentials-flow
+            </summary>
+            <returns>Access token response</returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.TokenQuerier.GetAuthorizationCodeFlow(System.String,System.String)">
+            <summary>
+            The OAuth 2.0 Authorization Code Flow allows an application to access a user's data on their behalf. This allows an application to acquire more sensitive, opt-in information about a user, such as their list of World of Warcraft characters, after obtaining the user's permission to do so. The Authorization Code Flow has two major parts: the authorization code request and the access token request.
+            https://develop.battle.net/documentation/guides/using-oauth/authorization-code-flow
+            </summary>
+            <param name="authorization_code">The previously-retrieved authorization_code.</param>
+            <param name="scope">The scopes needed for the access token. Note that this can be fewer scopes than the authorization.</param>
+            <returns>Access token response</returns>
+        </member>
+    </members>
+</doc>
