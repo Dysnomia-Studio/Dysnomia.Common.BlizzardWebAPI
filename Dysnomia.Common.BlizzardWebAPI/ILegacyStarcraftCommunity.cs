@@ -6,7 +6,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 	/// <summary>
 	/// See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
 	/// </summary>
-	interface ILegacyStarcraftCommunity {
+	public interface ILegacyStarcraftCommunity {
 		/// <summary>
 		/// Retrieves data about an individual SC2 profile.
 		/// </summary>

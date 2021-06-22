@@ -6,7 +6,7 @@ using Xunit;
 
 namespace Dysnomia.Common.BlizzardWebAPI.Test {
 	public class LegacyStarcraftCommunityTest : BaseTestClass {
-		protected readonly LegacyStarcraftCommunity legacyStarcraftCommunity;
+		protected readonly ILegacyStarcraftCommunity legacyStarcraftCommunity;
 
 		public LegacyStarcraftCommunityTest() {
 			this.legacyStarcraftCommunity = new LegacyStarcraftCommunity();

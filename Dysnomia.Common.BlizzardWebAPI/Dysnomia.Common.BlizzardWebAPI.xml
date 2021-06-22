@@ -20,6 +20,21 @@
             <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <returns></returns>
         </member>
+        <member name="T:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity">
+            <summary>
+            See https://develop.battle.net/documentation/starcraft-2/community-apis
+            </summary>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetStaticProfile(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Returns all static SC2 profile data (achievements, categories, criteria, and rewards).
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
@@ -34,6 +49,21 @@
             <param name="regionId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity">
+            <summary>
+            See https://develop.battle.net/documentation/starcraft-2/community-apis
+            </summary>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetStaticProfile(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Returns all static SC2 profile data (achievements, categories, criteria, and rewards).
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.TokenQuerier">
