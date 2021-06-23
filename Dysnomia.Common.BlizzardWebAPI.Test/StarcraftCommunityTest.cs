@@ -42,7 +42,16 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetLadderSummary_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await starcraftCommunity.GetLadderSummary(token, RegionEnum.EU, StarCraft2RegionEnum.Europe, StarCraft2RealmEnum.Europe, BattleNetProfileId);
+			var res = await starcraftCommunity.GetProfileLadderSummary(token, RegionEnum.EU, StarCraft2RegionEnum.Europe, StarCraft2RealmEnum.Europe, BattleNetProfileId);
+
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetProfileLadder_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await starcraftCommunity.GetProfileLadder(token, RegionEnum.EU, StarCraft2RegionEnum.Europe, StarCraft2RealmEnum.Europe, BattleNetProfileId, 0);
 
 			Assert.True(res != null);
 		}

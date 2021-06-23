@@ -104,7 +104,7 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
-        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSummary(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfileLadderSummary(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
             <summary>
             Returns a ladder summary for an individual SC2 profile.
             </summary>
@@ -116,7 +116,7 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
-        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSummary(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfileLadderSummary(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
             <summary>
             Returns a ladder summary for an individual SC2 profile.
             </summary>
@@ -125,6 +125,32 @@
             <param name="regionId">The region for the profile</param>
             <param name="realmId">Realm Id (1/2)</param>
             <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfileLadder(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.Int32,System.String)">
+            <summary>
+            Returns data about an individual profile's ladder.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfileLadder(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.Int32,System.String)">
+            <summary>
+            Returns data about an individual profile's ladder.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
@@ -228,7 +254,7 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
-        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSummary(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfileLadderSummary(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
             <summary>
             Returns a ladder summary for an individual SC2 profile.
             </summary>
@@ -240,7 +266,7 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
-        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSummary(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfileLadderSummary(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
             <summary>
             Returns a ladder summary for an individual SC2 profile.
             </summary>
@@ -249,6 +275,32 @@
             <param name="regionId">The region for the profile</param>
             <param name="realmId">Realm Id (1/2)</param>
             <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfileLadder(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.Int32,System.String)">
+            <summary>
+            Returns data about an individual profile's ladder.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfileLadder(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.Int32,System.String)">
+            <summary>
+            Returns data about an individual profile's ladder.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>

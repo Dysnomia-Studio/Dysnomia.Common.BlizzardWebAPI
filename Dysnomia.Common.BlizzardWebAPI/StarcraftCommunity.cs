@@ -110,8 +110,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftLadderSummary> GetLadderSummary(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
-			return await this.Get<StarcraftLadderSummary>(
+		public async Task<StarcraftProfileLadderSummary> GetProfileLadderSummary(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
+			return await this.Get<StarcraftProfileLadderSummary>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/profile/{1}/{2}/{3}/ladder/summary?locale={4}&access_token={5}",
 					region, regionId, realmId, profileId, locale, accessToken
@@ -128,8 +128,42 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftLadderSummary> GetLadderSummary(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
-			return await GetLadderSummary(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, locale);
+		public async Task<StarcraftProfileLadderSummary> GetProfileLadderSummary(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
+			return await GetProfileLadderSummary(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, locale);
+		}
+
+		/// <summary>
+		/// Returns data about an individual profile's ladder.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <param name="realmId">Realm Id (1/2)</param>
+		/// <param name="profileId">The profile ID</param>
+		/// <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
+		/// <param name="locale">The locale to reflect in localized data.</param>
+		/// <returns></returns>
+		public async Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, string region, int regionId, int realmId, ulong profileId, int ladderId, string locale = "en_US") {
+			return await this.Get<StarcraftProfileLadder>(
+				string.Format(
+					"https://{0}.api.blizzard.com/sc2/profile/{1}/{2}/{3}/ladder/{4}?locale={5}&access_token={6}",
+					region, regionId, realmId, profileId, ladderId, locale, accessToken
+				)
+			);
+		}
+		/// <summary>
+		/// Returns data about an individual profile's ladder.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <param name="realmId">Realm Id (1/2)</param>
+		/// <param name="profileId">The profile ID</param>
+		/// <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
+		/// <param name="locale">The locale to reflect in localized data.</param>
+		/// <returns></returns>
+		public async Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, int ladderId, string locale = "en_US") {
+			return await GetProfileLadder(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, ladderId, locale);
 		}
 	}
 }

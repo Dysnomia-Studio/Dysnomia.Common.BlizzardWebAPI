@@ -83,7 +83,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		Task<StarcraftLadderSummary> GetLadderSummary(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US");
+		Task<StarcraftProfileLadderSummary> GetProfileLadderSummary(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US");
 		/// <summary>
 		/// Returns a ladder summary for an individual SC2 profile.
 		/// </summary>
@@ -94,6 +94,31 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		Task<StarcraftLadderSummary> GetLadderSummary(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US");
+		Task<StarcraftProfileLadderSummary> GetProfileLadderSummary(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US");
+
+		/// <summary>
+		/// Returns data about an individual profile's ladder.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <param name="realmId">Realm Id (1/2)</param>
+		/// <param name="profileId">The profile ID</param>
+		/// <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
+		/// <param name="locale">The locale to reflect in localized data.</param>
+		/// <returns></returns>
+		Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, string region, int regionId, int realmId, ulong profileId, int ladderId, string locale = "en_US");
+		/// <summary>
+		/// Returns data about an individual profile's ladder.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <param name="realmId">Realm Id (1/2)</param>
+		/// <param name="profileId">The profile ID</param>
+		/// <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
+		/// <param name="locale">The locale to reflect in localized data.</param>
+		/// <returns></returns>
+		Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, int ladderId, string locale = "en_US");
 	}
 }
