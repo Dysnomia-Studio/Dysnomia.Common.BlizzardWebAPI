@@ -172,6 +172,24 @@
             <param name="regionId">The region for the profile</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSeason(System.String,System.String,System.Int32)">
+            <summary>
+            Returns data about the current season.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSeason(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)">
+            <summary>
+            Returns data about the current season.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
@@ -334,6 +352,24 @@
         <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetGrandmasterLeaderboard(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)">
             <summary>
             Returns ladder data for the current season's grandmaster leaderboard.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSeason(System.String,System.String,System.Int32)">
+            <summary>
+            Returns data about the current season.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSeason(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)">
+            <summary>
+            Returns data about the current season.
             </summary>
             <param name="accessToken">Credential Code Flow access token</param>
             <param name="region">The region of the data to retrieve.</param>

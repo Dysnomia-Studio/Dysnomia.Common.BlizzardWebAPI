@@ -137,5 +137,22 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="regionId">The region for the profile</param>
 		/// <returns></returns>
 		Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId);
+
+		/// <summary>
+		/// Returns data about the current season.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		Task<StarcraftSeason> GetLadderSeason(string accessToken, string region, int regionId);
+		/// <summary>
+		/// Returns data about the current season.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		Task<StarcraftSeason> GetLadderSeason(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId);
 	}
 }

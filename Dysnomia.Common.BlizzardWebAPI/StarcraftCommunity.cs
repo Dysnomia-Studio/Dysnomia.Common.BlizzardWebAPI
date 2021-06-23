@@ -191,5 +191,31 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		public async Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
 			return await GetGrandmasterLeaderboard(accessToken, region.ToString(), (int)regionId);
 		}
+
+		/// <summary>
+		/// Returns data about the current season.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		public async Task<StarcraftSeason> GetLadderSeason(string accessToken, string region, int regionId) {
+			return await this.Get<StarcraftSeason>(
+				string.Format(
+					"https://{0}.api.blizzard.com/sc2/ladder/season/{1}?access_token={2}",
+					region, regionId, accessToken
+				)
+			);
+		}
+		/// <summary>
+		/// Returns data about the current season.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		public async Task<StarcraftSeason> GetLadderSeason(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
+			return await GetLadderSeason(accessToken, region.ToString(), (int)regionId);
+		}
 	}
 }

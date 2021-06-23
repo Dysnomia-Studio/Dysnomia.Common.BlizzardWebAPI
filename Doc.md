@@ -9,6 +9,8 @@
 - [IStarcraftCommunity](#T-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity')
   - [GetGrandmasterLeaderboard(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetGrandmasterLeaderboard-System-String,System-String,System-Int32- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetGrandmasterLeaderboard(System.String,System.String,System.Int32)')
   - [GetGrandmasterLeaderboard(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetGrandmasterLeaderboard-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetGrandmasterLeaderboard(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)')
+  - [GetLadderSeason(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetLadderSeason-System-String,System-String,System-Int32- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSeason(System.String,System.String,System.Int32)')
+  - [GetLadderSeason(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetLadderSeason-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSeason(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetMetadataProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetMetadataProfile-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetMetadataProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)')
   - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
@@ -25,6 +27,8 @@
 - [StarcraftCommunity](#T-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity')
   - [GetGrandmasterLeaderboard(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetGrandmasterLeaderboard-System-String,System-String,System-Int32- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetGrandmasterLeaderboard(System.String,System.String,System.Int32)')
   - [GetGrandmasterLeaderboard(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetGrandmasterLeaderboard-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetGrandmasterLeaderboard(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)')
+  - [GetLadderSeason(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetLadderSeason-System-String,System-String,System-Int32- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSeason(System.String,System.String,System.Int32)')
+  - [GetLadderSeason(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetLadderSeason-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSeason(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetMetadataProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetMetadataProfile-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)')
   - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
@@ -128,6 +132,44 @@ Returns ladder data for the current season's grandmaster leaderboard.
 ##### Summary
 
 Returns ladder data for the current season's grandmaster leaderboard.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| regionId | [Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum') | The region for the profile |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetLadderSeason-System-String,System-String,System-Int32-'></a>
+### GetLadderSeason(accessToken,region,regionId) `method`
+
+##### Summary
+
+Returns data about the current season.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| regionId | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The region for the profile |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetLadderSeason-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum-'></a>
+### GetLadderSeason(accessToken,region,regionId) `method`
+
+##### Summary
+
+Returns data about the current season.
 
 ##### Returns
 
@@ -448,6 +490,44 @@ Returns ladder data for the current season's grandmaster leaderboard.
 ##### Summary
 
 Returns ladder data for the current season's grandmaster leaderboard.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| regionId | [Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum') | The region for the profile |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetLadderSeason-System-String,System-String,System-Int32-'></a>
+### GetLadderSeason(accessToken,region,regionId) `method`
+
+##### Summary
+
+Returns data about the current season.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| regionId | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The region for the profile |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetLadderSeason-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum-'></a>
+### GetLadderSeason(accessToken,region,regionId) `method`
+
+##### Summary
+
+Returns data about the current season.
 
 ##### Returns
 

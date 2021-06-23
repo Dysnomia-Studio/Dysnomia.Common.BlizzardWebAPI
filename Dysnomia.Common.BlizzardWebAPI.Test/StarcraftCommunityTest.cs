@@ -64,5 +64,14 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 
 			Assert.True(res != null);
 		}
+
+		[Fact]
+		public async Task GetLadderSeason_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await starcraftCommunity.GetLadderSeason(token, RegionEnum.EU, StarCraft2RegionEnum.Europe);
+
+			Assert.True(res != null);
+		}
 	}
 }
