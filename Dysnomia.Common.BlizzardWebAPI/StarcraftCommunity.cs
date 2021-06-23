@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 using Dysnomia.Common.BlizzardWebAPI.Enums;
 using Dysnomia.Common.BlizzardWebAPI.Models;
@@ -216,6 +218,32 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <returns></returns>
 		public async Task<StarcraftSeason> GetLadderSeason(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
 			return await GetLadderSeason(accessToken, region.ToString(), (int)regionId);
+		}
+
+		/// <summary>
+		/// Returns metadata for an individual's account.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="accountId">The ID of the account for which to retrieve data.</param>
+		/// <returns></returns>
+		public async Task<StarcraftAccount> GetPlayerAccount(string accessToken, string region, ulong accountId) {
+			return (await this.Get<IEnumerable<StarcraftAccount>>(
+				string.Format(
+					"https://{0}.api.blizzard.com/sc2/player/{1}?access_token={2}",
+					region, accountId, accessToken
+				)
+			)).FirstOrDefault();
+		}
+		/// <summary>
+		/// Returns metadata for an individual's account.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="accountId">The ID of the account for which to retrieve data.</param>
+		/// <returns></returns>
+		public async Task<StarcraftAccount> GetPlayerAccount(string accessToken, RegionEnum region, ulong accountId) {
+			return await GetPlayerAccount(accessToken, region.ToString(), accountId);
 		}
 	}
 }

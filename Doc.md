@@ -13,6 +13,8 @@
   - [GetLadderSeason(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetLadderSeason-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSeason(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetMetadataProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetMetadataProfile-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetMetadataProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)')
+  - [GetPlayerAccount(accessToken,region,accountId)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetPlayerAccount-System-String,System-String,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetPlayerAccount(System.String,System.String,System.UInt64)')
+  - [GetPlayerAccount(accessToken,region,accountId)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetPlayerAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetPlayerAccount(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.UInt64)')
   - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetProfile-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)')
   - [GetProfileLadder(accessToken,region,regionId,realmId,profileId,ladderId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetProfileLadder-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfileLadder(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.Int32,System.String)')
@@ -31,6 +33,8 @@
   - [GetLadderSeason(accessToken,region,regionId)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetLadderSeason-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSeason(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetMetadataProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetMetadataProfile-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)')
+  - [GetPlayerAccount(accessToken,region,accountId)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetPlayerAccount-System-String,System-String,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetPlayerAccount(System.String,System.String,System.UInt64)')
+  - [GetPlayerAccount(accessToken,region,accountId)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetPlayerAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetPlayerAccount(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.UInt64)')
   - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetProfile-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)')
   - [GetProfileLadder(accessToken,region,regionId,realmId,profileId,ladderId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetProfileLadder-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfileLadder(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.Int32,System.String)')
@@ -226,6 +230,44 @@ Returns metadata for an individual's profile.
 | realmId | [Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum') | Realm Id (1/2) |
 | profileId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The profile ID |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetPlayerAccount-System-String,System-String,System-UInt64-'></a>
+### GetPlayerAccount(accessToken,region,accountId) `method`
+
+##### Summary
+
+Returns metadata for an individual's account.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| accountId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the account for which to retrieve data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetPlayerAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-UInt64-'></a>
+### GetPlayerAccount(accessToken,region,accountId) `method`
+
+##### Summary
+
+Returns metadata for an individual's account.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| accountId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the account for which to retrieve data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String-'></a>
 ### GetProfile(accessToken,region,regionId,realmId,profileId,locale) `method`
@@ -584,6 +626,44 @@ Returns metadata for an individual's profile.
 | realmId | [Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum') | Realm Id (1/2) |
 | profileId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The profile ID |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetPlayerAccount-System-String,System-String,System-UInt64-'></a>
+### GetPlayerAccount(accessToken,region,accountId) `method`
+
+##### Summary
+
+Returns metadata for an individual's account.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| accountId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the account for which to retrieve data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetPlayerAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-UInt64-'></a>
+### GetPlayerAccount(accessToken,region,accountId) `method`
+
+##### Summary
+
+Returns metadata for an individual's account.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| accountId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the account for which to retrieve data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String-'></a>
 ### GetProfile(accessToken,region,regionId,realmId,profileId,locale) `method`

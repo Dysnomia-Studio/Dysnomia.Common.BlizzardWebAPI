@@ -190,6 +190,24 @@
             <param name="regionId">The region for the profile</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetPlayerAccount(System.String,System.String,System.UInt64)">
+            <summary>
+            Returns metadata for an individual's account.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="accountId">The ID of the account for which to retrieve data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetPlayerAccount(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.UInt64)">
+            <summary>
+            Returns metadata for an individual's account.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="accountId">The ID of the account for which to retrieve data.</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
@@ -374,6 +392,24 @@
             <param name="accessToken">Credential Code Flow access token</param>
             <param name="region">The region of the data to retrieve.</param>
             <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetPlayerAccount(System.String,System.String,System.UInt64)">
+            <summary>
+            Returns metadata for an individual's account.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="accountId">The ID of the account for which to retrieve data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetPlayerAccount(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.UInt64)">
+            <summary>
+            Returns metadata for an individual's account.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="accountId">The ID of the account for which to retrieve data.</param>
             <returns></returns>
         </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.TokenQuerier">
