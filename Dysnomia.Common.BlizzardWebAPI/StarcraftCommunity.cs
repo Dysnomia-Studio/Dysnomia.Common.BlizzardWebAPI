@@ -165,5 +165,31 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		public async Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, int ladderId, string locale = "en_US") {
 			return await GetProfileLadder(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, ladderId, locale);
 		}
+
+		/// <summary>
+		/// Returns ladder data for the current season's grandmaster leaderboard.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		public async Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, string region, int regionId) {
+			return await this.Get<StarcraftGrandmasterLeaderboard>(
+				string.Format(
+					"https://{0}.api.blizzard.com/sc2/ladder/grandmaster/{1}?access_token={2}",
+					region, regionId, accessToken
+				)
+			);
+		}
+		/// <summary>
+		/// Returns ladder data for the current season's grandmaster leaderboard.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		public async Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
+			return await GetGrandmasterLeaderboard(accessToken, region.ToString(), (int)regionId);
+		}
 	}
 }

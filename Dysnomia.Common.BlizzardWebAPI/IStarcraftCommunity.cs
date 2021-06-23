@@ -60,7 +60,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		Task<StarcraftProfile> GetProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US");
+		Task<Models.StarcraftProfile> GetProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US");
 		/// <summary>
 		/// Returns data about an individual SC2 profile.
 		/// </summary>
@@ -71,7 +71,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		Task<StarcraftProfile> GetProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US");
+		Task<Models.StarcraftProfile> GetProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US");
 
 		/// <summary>
 		/// Returns a ladder summary for an individual SC2 profile.
@@ -120,5 +120,22 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, int ladderId, string locale = "en_US");
+
+		/// <summary>
+		/// Returns ladder data for the current season's grandmaster leaderboard.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, string region, int regionId);
+		/// <summary>
+		/// Returns ladder data for the current season's grandmaster leaderboard.
+		/// </summary>
+		/// <param name="accessToken">Credential Code Flow access token</param>
+		/// <param name="region">The region of the data to retrieve.</param>
+		/// <param name="regionId">The region for the profile</param>
+		/// <returns></returns>
+		Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId);
 	}
 }

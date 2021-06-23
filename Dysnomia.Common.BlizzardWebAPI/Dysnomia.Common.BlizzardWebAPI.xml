@@ -154,6 +154,24 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetGrandmasterLeaderboard(System.String,System.String,System.Int32)">
+            <summary>
+            Returns ladder data for the current season's grandmaster leaderboard.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetGrandmasterLeaderboard(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)">
+            <summary>
+            Returns ladder data for the current season's grandmaster leaderboard.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
@@ -302,6 +320,24 @@
             <param name="profileId">The profile ID</param>
             <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
             <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetGrandmasterLeaderboard(System.String,System.String,System.Int32)">
+            <summary>
+            Returns ladder data for the current season's grandmaster leaderboard.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetGrandmasterLeaderboard(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum)">
+            <summary>
+            Returns ladder data for the current season's grandmaster leaderboard.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
             <returns></returns>
         </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.TokenQuerier">

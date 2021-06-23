@@ -55,5 +55,14 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 
 			Assert.True(res != null);
 		}
+
+		[Fact]
+		public async Task GetGrandmasterLeaderboard_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await starcraftCommunity.GetGrandmasterLeaderboard(token, RegionEnum.EU, StarCraft2RegionEnum.Europe);
+
+			Assert.True(res != null);
+		}
 	}
 }
