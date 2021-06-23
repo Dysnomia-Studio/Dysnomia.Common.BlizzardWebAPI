@@ -4,8 +4,9 @@ WORKDIR /app
 ARG SONAR_HOST
 ARG SONAR_TOKEN
 ARG CLIENT_SECRET
-ARG CLIENT_KEY
-ARG BNETID
+ARG CLIENT_ID
+ARG BATTLENETACCOUNTID
+ARG BATTLENETPROFILEID
 
 # Install sonarScanner
 RUN dotnet tool install --global dotnet-sonarscanner
@@ -24,8 +25,9 @@ RUN apt-get install -y nodejs
 COPY . ./
 
 RUN jq ".CLIENT_SECRET = \"$CLIENT_SECRET\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
-RUN jq ".CLIENT_KEY = \"$CLIENT_KEY\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
-RUN jq ".BNETID = \"$BNETID\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
+RUN jq ".CLIENT_ID = \"$CLIENT_ID\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
+RUN jq ".BattleNetAccountId = \"$BATTLENETACCOUNTID\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
+RUN jq ".BattleNetProfileId = \"$BATTLENETPROFILEID\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
 
 RUN dotnet sonarscanner begin /k:"dysnomia-common-blizzardwebapi" /d:sonar.host.url="$SONAR_HOST" /d:sonar.login="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"
 RUN dotnet restore Dysnomia.Common.BlizzardWebAPI.sln --ignore-failed-sources /p:EnableDefaultItems=false

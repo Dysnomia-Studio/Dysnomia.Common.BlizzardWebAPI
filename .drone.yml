@@ -34,17 +34,20 @@ steps:
       from_secret: SONAR_TOKEN
     CLIENT_SECRET: 
       from_secret: CLIENT_SECRET
-    CLIENT_KEY: 
-      from_secret: CLIENT_KEY
-    BNETID: 
-      from_secret: BNETID
+    CLIENT_ID: 
+      from_secret: CLIENT_ID
+    BATTLENETACCOUNTID: 
+      from_secret: BATTLENETACCOUNTID
+    BATTLENETPROFILEID: 
+      from_secret: BATTLENETPROFILEID
   settings:
     build_args_from_env:
       - SONAR_HOST
       - SONAR_TOKEN
       - CLIENT_SECRET
-      - CLIENT_KEY
-      - BNETID
+      - CLIENT_ID
+      - BATTLENETACCOUNTID
+      - BATTLENETPROFILEID
 
   when:
     event:
