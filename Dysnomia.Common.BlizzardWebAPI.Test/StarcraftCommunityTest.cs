@@ -29,5 +29,14 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 
 			Assert.True(res != null);
 		}
+
+		[Fact]
+		public async Task GetProfile_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await starcraftCommunity.GetProfile(token, RegionEnum.EU.ToString(), (int)StarCraft2RegionEnum.Europe, (int)StarCraft2RealmEnum.Europe, BattleNetProfileId);
+
+			Assert.True(res != null);
+		}
 	}
 }

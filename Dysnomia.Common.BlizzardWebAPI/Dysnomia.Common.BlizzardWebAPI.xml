@@ -47,6 +47,18 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+            <summary>
+            Returns data about an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
@@ -81,6 +93,18 @@
         <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
             <summary>
             Returns metadata for an individual's profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+            <summary>
+            Returns data about an individual SC2 profile.
             </summary>
             <param name="accessToken">Credential Code Flow access token</param>
             <param name="region">The region of the data to retrieve.</param>

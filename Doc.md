@@ -7,11 +7,13 @@
   - [GetPlayerProfile(accessToken,region,regionId,realmId,profileId)](#M-Dysnomia-Common-BlizzardWebAPI-ILegacyStarcraftCommunity-GetPlayerProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraftCommunity.GetPlayerProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64)')
 - [IStarcraftCommunity](#T-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetMetadataProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
+  - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetStaticProfile(accessToken,region,regionId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetStaticProfile-System-String,System-String,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetStaticProfile(System.String,System.String,System.Int32,System.String)')
 - [LegacyStarcraftCommunity](#T-Dysnomia-Common-BlizzardWebAPI-LegacyStarcraftCommunity 'Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity')
   - [GetPlayerProfile(accessToken,region,regionId,realmId,profileId)](#M-Dysnomia-Common-BlizzardWebAPI-LegacyStarcraftCommunity-GetPlayerProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity.GetPlayerProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64)')
 - [StarcraftCommunity](#T-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity')
   - [GetMetadataProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetMetadataProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
+  - [GetProfile(accessToken,region,regionId,realmId,profileId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)')
   - [GetStaticProfile(accessToken,region,regionId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetStaticProfile-System-String,System-String,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetStaticProfile(System.String,System.String,System.Int32,System.String)')
 - [TokenQuerier](#T-Dysnomia-Common-BlizzardWebAPI-TokenQuerier 'Dysnomia.Common.BlizzardWebAPI.TokenQuerier')
   - [GetAuthorizationCodeFlow(authorization_code,scope)](#M-Dysnomia-Common-BlizzardWebAPI-TokenQuerier-GetAuthorizationCodeFlow-System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.TokenQuerier.GetAuthorizationCodeFlow(System.String,System.String)')
@@ -66,6 +68,28 @@ See https://develop.battle.net/documentation/starcraft-2/community-apis
 ##### Summary
 
 Returns metadata for an individual's profile.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| regionId | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The region for the profile |
+| realmId | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | Realm Id (1/2) |
+| profileId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The profile ID |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IStarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String-'></a>
+### GetProfile(accessToken,region,regionId,realmId,profileId,locale) `method`
+
+##### Summary
+
+Returns data about an individual SC2 profile.
 
 ##### Returns
 
@@ -151,6 +175,28 @@ See https://develop.battle.net/documentation/starcraft-2/community-apis
 ##### Summary
 
 Returns metadata for an individual's profile.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Credential Code Flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| regionId | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | The region for the profile |
+| realmId | [System.Int32](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.Int32 'System.Int32') | Realm Id (1/2) |
+| profileId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The profile ID |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-StarcraftCommunity-GetProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64,System-String-'></a>
+### GetProfile(accessToken,region,regionId,realmId,profileId,locale) `method`
+
+##### Summary
+
+Returns data about an individual SC2 profile.
 
 ##### Returns
 
