@@ -16,7 +16,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetPlayerProfile_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await legacyStarcraftCommunity.GetPlayerProfile(token, RegionEnum.EU.ToString(), (int)StarCraft2RegionEnum.Europe, (int)StarCraft2RealmEnum.Europe, BattleNetProfileId);
+			var res = await legacyStarcraftCommunity.GetPlayerProfile(token, RegionEnum.EU, StarCraft2RegionEnum.Europe, StarCraft2RealmEnum.Europe, BattleNetProfileId);
 
 			Assert.True(res != null);
 		}

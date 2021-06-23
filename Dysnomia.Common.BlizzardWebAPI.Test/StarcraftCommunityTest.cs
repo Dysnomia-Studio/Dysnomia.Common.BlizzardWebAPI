@@ -16,8 +16,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetStaticProfile_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await starcraftCommunity.GetStaticProfile(token, RegionEnum.EU.ToString(), (int)StarCraft2RegionEnum.Europe);
-
+			var res = await starcraftCommunity.GetStaticProfile(token, RegionEnum.EU, StarCraft2RegionEnum.Europe);
 			Assert.True(res != null);
 		}
 
@@ -25,7 +24,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetMetadataProfile_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await starcraftCommunity.GetMetadataProfile(token, RegionEnum.EU.ToString(), (int)StarCraft2RegionEnum.Europe, (int)StarCraft2RealmEnum.Europe, BattleNetProfileId);
+			var res = await starcraftCommunity.GetMetadataProfile(token, RegionEnum.EU, StarCraft2RegionEnum.Europe, StarCraft2RealmEnum.Europe, BattleNetProfileId);
 
 			Assert.True(res != null);
 		}
@@ -34,7 +33,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetProfile_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await starcraftCommunity.GetProfile(token, RegionEnum.EU.ToString(), (int)StarCraft2RegionEnum.Europe, (int)StarCraft2RealmEnum.Europe, BattleNetProfileId);
+			var res = await starcraftCommunity.GetProfile(token, RegionEnum.EU, StarCraft2RegionEnum.Europe, StarCraft2RealmEnum.Europe, BattleNetProfileId);
 
 			Assert.True(res != null);
 		}
@@ -43,7 +42,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetLadderSummary_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await starcraftCommunity.GetLadderSummary(token, RegionEnum.EU.ToString(), (int)StarCraft2RegionEnum.Europe, (int)StarCraft2RealmEnum.Europe, BattleNetProfileId);
+			var res = await starcraftCommunity.GetLadderSummary(token, RegionEnum.EU, StarCraft2RegionEnum.Europe, StarCraft2RealmEnum.Europe, BattleNetProfileId);
 
 			Assert.True(res != null);
 		}

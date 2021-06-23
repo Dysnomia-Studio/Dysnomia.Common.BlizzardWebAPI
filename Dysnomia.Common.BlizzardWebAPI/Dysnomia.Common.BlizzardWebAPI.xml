@@ -20,6 +20,17 @@
             <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraftCommunity.GetPlayerProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64)">
+            <summary>
+            Retrieves data about an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">StarCraft II community APIs use the region parameter to set the host region in the Try It feature. Note: {region} does not affect StarCraft II responses, which use the :regionId parameter in requests.</param>
+            <param name="regionId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis
@@ -35,7 +46,29 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetStaticProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,System.String)">
+            <summary>
+            Returns all static SC2 profile data (achievements, categories, criteria, and rewards).
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
         <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+            <summary>
+            Returns metadata for an individual's profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetMetadataProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
             <summary>
             Returns metadata for an individual's profile.
             </summary>
@@ -59,7 +92,31 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
+            <summary>
+            Returns data about an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
         <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSummary(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+            <summary>
+            Returns a ladder summary for an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IStarcraftCommunity.GetLadderSummary(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
             <summary>
             Returns a ladder summary for an individual SC2 profile.
             </summary>
@@ -87,6 +144,17 @@
             <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.LegacyStarcraftCommunity.GetPlayerProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64)">
+            <summary>
+            Retrieves data about an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">StarCraft II community APIs use the region parameter to set the host region in the Try It feature. Note: {region} does not affect StarCraft II responses, which use the :regionId parameter in requests.</param>
+            <param name="regionId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="realmId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis
@@ -102,7 +170,29 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetStaticProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,System.String)">
+            <summary>
+            Returns all static SC2 profile data (achievements, categories, criteria, and rewards).
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
         <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+            <summary>
+            Returns metadata for an individual's profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetMetadataProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
             <summary>
             Returns metadata for an individual's profile.
             </summary>
@@ -126,7 +216,31 @@
             <param name="locale">The locale to reflect in localized data.</param>
             <returns></returns>
         </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
+            <summary>
+            Returns data about an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
         <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSummary(System.String,System.String,System.Int32,System.Int32,System.UInt64,System.String)">
+            <summary>
+            Returns a ladder summary for an individual SC2 profile.
+            </summary>
+            <param name="accessToken">Credential Code Flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="regionId">The region for the profile</param>
+            <param name="realmId">Realm Id (1/2)</param>
+            <param name="profileId">The profile ID</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.StarcraftCommunity.GetLadderSummary(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64,System.String)">
             <summary>
             Returns a ladder summary for an individual SC2 profile.
             </summary>
