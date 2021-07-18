@@ -4,6 +4,237 @@
         <name>Dysnomia.Common.BlizzardWebAPI</name>
     </assembly>
     <members>
+        <member name="T:Dysnomia.Common.BlizzardWebAPI.Diablo3Community">
+            <summary>
+            Diablo III community APIs provide endpoints for Diablo III player profiles.
+            https://develop.battle.net/documentation/diablo-3/community-apis
+            </summary>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetImage(Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ImageType,System.String,System.String)">
+            <summary>
+            Get image URL from type, size and icon in blizzard CDN.
+            Warning: this CDN only supports HTTP, not HTTPS
+            </summary>
+            <param name="type">The image type (items or skills)</param>
+            <param name="size">The size: for items must either be small or large; for skills must be 21, 42, or 64 (These values refer to the image size in pixels).</param>
+            <param name="icon">Icon name without extension</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetActIndex(System.String,System.String,System.String)">
+            <summary>
+            Returns an index of acts.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetActIndex(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String)">
+            <summary>
+            Returns an index of acts.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetAct(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Returns a single act by ID.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="actId">The ID of the act to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetAct(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.Int32,System.String)">
+            <summary>
+            Returns a single act by ID.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="actId">The ID of the act to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetArtisan(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a single artisan by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetArtisan(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String)">
+            <summary>
+            Returns a single artisan by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetRecipe(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a single recipe by slug for the specified artisan.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="recipeSlug">The slug of the recipe to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetRecipe(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String,System.String)">
+            <summary>
+            Returns a single recipe by slug for the specified artisan.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="recipeSlug">The slug of the recipe to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetFollower(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a single follower by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="followerSlug">The slug of the follower to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetFollower(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Follower,System.String)">
+            <summary>
+            Returns a single follower by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="followerSlug">The slug of the follower to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community">
+            <summary>
+            Diablo III community APIs provide endpoints for Diablo III player profiles.
+            https://develop.battle.net/documentation/diablo-3/community-apis
+            </summary>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetImage(Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ImageType,System.String,System.String)">
+            <summary>
+            Get image URL from type, size and icon in blizzard CDN
+            </summary>
+            <param name="type">The image type (items or skills)</param>
+            <param name="size">The size: for items must either be small or large; for skills must be 21, 42, or 64 (These values refer to the image size in pixels).</param>
+            <param name="icon">Icon name without extension</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetActIndex(System.String,System.String,System.String)">
+            <summary>
+            Returns an index of acts.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetActIndex(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String)">
+            <summary>
+            Returns an index of acts.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetAct(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Returns a single act by ID.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="actId">The ID of the act to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetAct(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.Int32,System.String)">
+            <summary>
+            Returns a single act by ID.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="actId">The ID of the act to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetArtisan(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a single artisan by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetArtisan(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String)">
+            <summary>
+            Returns a single artisan by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetRecipe(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a single recipe by slug for the specified artisan.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="recipeSlug">The slug of the recipe to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetRecipe(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String,System.String)">
+            <summary>
+            Returns a single recipe by slug for the specified artisan.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="artisanSlug">The slug of the artisan to retrieve.</param>
+            <param name="recipeSlug">The slug of the recipe to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetFollower(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a single follower by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="followerSlug">The slug of the follower to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetFollower(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Follower,System.String)">
+            <summary>
+            Returns a single follower by slug.
+            </summary>
+            <param name="accessToken">Client credential flow access token</param>
+            <param name="region">The region of the data to retrieve.</param>
+            <param name="followerSlug">The slug of the follower to retrieve.</param>
+            <param name="locale">The locale to reflect in localized data.</param>
+            <returns></returns>
+        </member>
         <member name="T:Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraft2Community">
             <summary>
             See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
