@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
 namespace Dysnomia.Common.BlizzardWebAPI.Models {
-	public class StarcraftGrandmasterLeaderboard {
-		public IEnumerable<StarcraftGrandmasterLeaderboardLadderTeam> ladderTeams { get; set; }
+	public class Starcraft2GrandmasterLeaderboard {
+		public IEnumerable<Starcraft2GrandmasterLeaderboardLadderTeam> ladderTeams { get; set; }
 	}
 
-	public class StarcraftGrandmasterLeaderboardLadderTeam {
-		public IEnumerable<StarcraftGrandmasterLeaderboardLadderTeamMember> teamMembers { get; set; }
+	public class Starcraft2GrandmasterLeaderboardLadderTeam {
+		public IEnumerable<Starcraft2GrandmasterLeaderboardLadderTeamMember> teamMembers { get; set; }
 		public int previousRank { get; set; }
 		public int points { get; set; }
 		public int wins { get; set; }
@@ -15,7 +15,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Models {
 		public ulong joinTimestamp { get; set; }
 	}
 
-	public class StarcraftGrandmasterLeaderboardLadderTeamMember {
+	public class Starcraft2GrandmasterLeaderboardLadderTeamMember {
 		public string id { get; set; }
 		public int realm { get; set; }
 		public int region { get; set; }

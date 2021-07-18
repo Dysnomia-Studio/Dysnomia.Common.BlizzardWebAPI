@@ -1,5 +1,5 @@
 ﻿namespace Dysnomia.Common.BlizzardWebAPI.Models {
-	public class StarcraftMetadataProfile {
+	public class Starcraft2MetadataProfile {
 		public string name { get; set; }
 		public string profileUrl { get; set; }
 		public string avatarUrl { get; set; }

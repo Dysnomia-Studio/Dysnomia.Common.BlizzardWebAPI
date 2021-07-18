@@ -9,17 +9,17 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 	/// <summary>
 	/// See https://develop.battle.net/documentation/starcraft-2/community-apis
 	/// </summary>
-	public class StarcraftCommunity : BlizzardWebAPIQuerier, IStarcraftCommunity {
+	public class Starcraft2Community : BlizzardWebAPIQuerier, IStarcraft2Community {
 		/// <summary>
-		/// Returns all static SC2 profile data (achievements, categories, criteria, and rewards).
+		/// Returns all static Starcraft2 profile data (achievements, categories, criteria, and rewards).
 		/// </summary>
 		/// <param name="accessToken">Credential Code Flow access token</param>
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="regionId">The region for the profile</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftStaticProfile> GetStaticProfile(string accessToken, string region, int regionId, string locale = "en_US") {
-			return await this.Get<StarcraftStaticProfile>(
+		public async Task<Starcraft2StaticProfile> GetStaticProfile(string accessToken, string region, int regionId, string locale = "en_US") {
+			return await this.Get<Starcraft2StaticProfile>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/static/profile/{1}?locale={2}&access_token={3}",
 					region, regionId, locale, accessToken
@@ -27,14 +27,14 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 			);
 		}
 		/// <summary>
-		/// Returns all static SC2 profile data (achievements, categories, criteria, and rewards).
+		/// Returns all static Starcraft2 profile data (achievements, categories, criteria, and rewards).
 		/// </summary>
 		/// <param name="accessToken">Credential Code Flow access token</param>
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="regionId">The region for the profile</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftStaticProfile> GetStaticProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, string locale = "en_US") {
+		public async Task<Starcraft2StaticProfile> GetStaticProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, string locale = "en_US") {
 			return await GetStaticProfile(accessToken, region.ToString(), (int)regionId, locale);
 		}
 
@@ -48,8 +48,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftMetadataProfile> GetMetadataProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
-			return await this.Get<StarcraftMetadataProfile>(
+		public async Task<Starcraft2MetadataProfile> GetMetadataProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
+			return await this.Get<Starcraft2MetadataProfile>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/metadata/profile/{1}/{2}/{3}?locale={4}&access_token={5}",
 					region, regionId, realmId, profileId, locale, accessToken
@@ -66,12 +66,12 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftMetadataProfile> GetMetadataProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
+		public async Task<Starcraft2MetadataProfile> GetMetadataProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
 			return await GetMetadataProfile(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, locale);
 		}
 
 		/// <summary>
-		/// Returns data about an individual SC2 profile.
+		/// Returns data about an individual Starcraft2 profile.
 		/// </summary>
 		/// <param name="accessToken">Credential Code Flow access token</param>
 		/// <param name="region">The region of the data to retrieve.</param>
@@ -80,8 +80,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftProfile> GetProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
-			return await this.Get<StarcraftProfile>(
+		public async Task<Starcraft2Profile> GetProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
+			return await this.Get<Starcraft2Profile>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/profile/{1}/{2}/{3}?locale={4}&access_token={5}",
 					region, regionId, realmId, profileId, locale, accessToken
@@ -89,7 +89,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 			);
 		}
 		/// <summary>
-		/// Returns data about an individual SC2 profile.
+		/// Returns data about an individual Starcraft2 profile.
 		/// </summary>
 		/// <param name="accessToken">Credential Code Flow access token</param>
 		/// <param name="region">The region of the data to retrieve.</param>
@@ -98,12 +98,12 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftProfile> GetProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
+		public async Task<Starcraft2Profile> GetProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
 			return await GetProfile(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, locale);
 		}
 
 		/// <summary>
-		/// Returns a ladder summary for an individual SC2 profile.
+		/// Returns a ladder summary for an individual Starcraft2 profile.
 		/// </summary>
 		/// <param name="accessToken">Credential Code Flow access token</param>
 		/// <param name="region">The region of the data to retrieve.</param>
@@ -112,8 +112,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftProfileLadderSummary> GetProfileLadderSummary(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
-			return await this.Get<StarcraftProfileLadderSummary>(
+		public async Task<Starcraft2ProfileLadderSummary> GetProfileLadderSummary(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US") {
+			return await this.Get<Starcraft2ProfileLadderSummary>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/profile/{1}/{2}/{3}/ladder/summary?locale={4}&access_token={5}",
 					region, regionId, realmId, profileId, locale, accessToken
@@ -121,7 +121,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 			);
 		}
 		/// <summary>
-		/// Returns a ladder summary for an individual SC2 profile.
+		/// Returns a ladder summary for an individual Starcraft2 profile.
 		/// </summary>
 		/// <param name="accessToken">Credential Code Flow access token</param>
 		/// <param name="region">The region of the data to retrieve.</param>
@@ -130,7 +130,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftProfileLadderSummary> GetProfileLadderSummary(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
+		public async Task<Starcraft2ProfileLadderSummary> GetProfileLadderSummary(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US") {
 			return await GetProfileLadderSummary(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, locale);
 		}
 
@@ -145,8 +145,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, string region, int regionId, int realmId, ulong profileId, int ladderId, string locale = "en_US") {
-			return await this.Get<StarcraftProfileLadder>(
+		public async Task<Starcraft2ProfileLadder> GetProfileLadder(string accessToken, string region, int regionId, int realmId, ulong profileId, int ladderId, string locale = "en_US") {
+			return await this.Get<Starcraft2ProfileLadder>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/profile/{1}/{2}/{3}/ladder/{4}?locale={5}&access_token={6}",
 					region, regionId, realmId, profileId, ladderId, locale, accessToken
@@ -164,7 +164,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="ladderId">The ID of the ladder for which to retrieve data.</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftProfileLadder> GetProfileLadder(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, int ladderId, string locale = "en_US") {
+		public async Task<Starcraft2ProfileLadder> GetProfileLadder(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, int ladderId, string locale = "en_US") {
 			return await GetProfileLadder(accessToken, region.ToString(), (int)regionId, (int)realmId, profileId, ladderId, locale);
 		}
 
@@ -175,8 +175,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="regionId">The region for the profile</param>
 		/// <returns></returns>
-		public async Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, string region, int regionId) {
-			return await this.Get<StarcraftGrandmasterLeaderboard>(
+		public async Task<Starcraft2GrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, string region, int regionId) {
+			return await this.Get<Starcraft2GrandmasterLeaderboard>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/ladder/grandmaster/{1}?access_token={2}",
 					region, regionId, accessToken
@@ -190,7 +190,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="regionId">The region for the profile</param>
 		/// <returns></returns>
-		public async Task<StarcraftGrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
+		public async Task<Starcraft2GrandmasterLeaderboard> GetGrandmasterLeaderboard(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
 			return await GetGrandmasterLeaderboard(accessToken, region.ToString(), (int)regionId);
 		}
 
@@ -201,8 +201,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="regionId">The region for the profile</param>
 		/// <returns></returns>
-		public async Task<StarcraftSeason> GetLadderSeason(string accessToken, string region, int regionId) {
-			return await this.Get<StarcraftSeason>(
+		public async Task<Starcraft2Season> GetLadderSeason(string accessToken, string region, int regionId) {
+			return await this.Get<Starcraft2Season>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/ladder/season/{1}?access_token={2}",
 					region, regionId, accessToken
@@ -216,7 +216,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="regionId">The region for the profile</param>
 		/// <returns></returns>
-		public async Task<StarcraftSeason> GetLadderSeason(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
+		public async Task<Starcraft2Season> GetLadderSeason(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId) {
 			return await GetLadderSeason(accessToken, region.ToString(), (int)regionId);
 		}
 
@@ -227,8 +227,8 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="accountId">The ID of the account for which to retrieve data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftAccount> GetPlayerAccount(string accessToken, string region, ulong accountId) {
-			return (await this.Get<IEnumerable<StarcraftAccount>>(
+		public async Task<Starcraft2Account> GetPlayerAccount(string accessToken, string region, ulong accountId) {
+			return (await this.Get<IEnumerable<Starcraft2Account>>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/player/{1}?access_token={2}",
 					region, accountId, accessToken
@@ -242,7 +242,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="region">The region of the data to retrieve.</param>
 		/// <param name="accountId">The ID of the account for which to retrieve data.</param>
 		/// <returns></returns>
-		public async Task<StarcraftAccount> GetPlayerAccount(string accessToken, RegionEnum region, ulong accountId) {
+		public async Task<Starcraft2Account> GetPlayerAccount(string accessToken, RegionEnum region, ulong accountId) {
 			return await GetPlayerAccount(accessToken, region.ToString(), accountId);
 		}
 	}

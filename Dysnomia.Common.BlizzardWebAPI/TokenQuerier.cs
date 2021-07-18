@@ -53,7 +53,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="authorization_code">The previously-retrieved authorization_code.</param>
 		/// <param name="scope">The scopes needed for the access token. Note that this can be fewer scopes than the authorization.</param>
 		/// <returns>Access token response</returns>
-		public async Task<AccessTokenResponse> GetAuthorizationCodeFlow(string authorization_code, string scope = "wow.profile,sc2.profile,d3.profile,openid") {
+		public async Task<AccessTokenResponse> GetAuthorizationCodeFlow(string authorization_code, string scope = "wow.profile,Starcraft2.profile,d3.profile,openid") {
 			using var client = new HttpClient();
 			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic",
 				Convert.ToBase64String(System.Text.Encoding.ASCII.GetBytes(string.Format("{0}:{1}", clientId, clientSecret)))

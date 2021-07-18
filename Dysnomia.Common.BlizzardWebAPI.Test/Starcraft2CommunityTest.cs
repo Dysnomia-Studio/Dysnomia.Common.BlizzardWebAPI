@@ -5,11 +5,11 @@ using Dysnomia.Common.BlizzardWebAPI.Enums;
 using Xunit;
 
 namespace Dysnomia.Common.BlizzardWebAPI.Test {
-	public class StarcraftCommunityTest : BaseTestClass {
-		protected readonly IStarcraftCommunity starcraftCommunity;
+	public class Starcraft2CommunityTest : BaseTestClass {
+		protected readonly IStarcraft2Community starcraftCommunity;
 
-		public StarcraftCommunityTest() {
-			this.starcraftCommunity = new StarcraftCommunity();
+		public Starcraft2CommunityTest() {
+			this.starcraftCommunity = new Starcraft2Community();
 		}
 
 		[Fact]

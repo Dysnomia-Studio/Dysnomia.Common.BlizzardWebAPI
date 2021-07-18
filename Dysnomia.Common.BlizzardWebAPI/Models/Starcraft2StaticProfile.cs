@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 
 namespace Dysnomia.Common.BlizzardWebAPI.Models {
-	public class StarcraftStaticProfile {
-		public IEnumerable<StarcraftStaticProfileAchievement> achievements { get; set; }
-		public IEnumerable<StarcraftStaticProfileCriteria> criteria { get; set; }
-		public IEnumerable<StarcraftStaticProfileCategory> categories { get; set; }
-		public IEnumerable<StarcraftStaticProfileReward> rewards { get; set; }
+	public class Starcraft2StaticProfile {
+		public IEnumerable<Starcraft2StaticProfileAchievement> achievements { get; set; }
+		public IEnumerable<Starcraft2StaticProfileCriteria> criteria { get; set; }
+		public IEnumerable<Starcraft2StaticProfileCategory> categories { get; set; }
+		public IEnumerable<Starcraft2StaticProfileReward> rewards { get; set; }
 	}
 
-	public class StarcraftStaticProfileAchievement {
+	public class Starcraft2StaticProfileAchievement {
 		public string categoryId { get; set; }
 		public IEnumerable<string> chainAchievementIds { get; set; }
 		public int chainRewardSize { get; set; }
@@ -23,7 +23,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Models {
 		public int uiOrderHint { get; set; }
 	}
 
-	public class StarcraftStaticProfileCriteria {
+	public class Starcraft2StaticProfileCriteria {
 		public string achievementId { get; set; }
 		public string description { get; set; }
 		public string evaluationClass { get; set; }
@@ -33,7 +33,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Models {
 		public int uiOrderHint { get; set; }
 	}
 
-	public class StarcraftStaticProfileCategory {
+	public class Starcraft2StaticProfileCategory {
 		public IEnumerable<string> childrenCategoryIds { get; set; }
 		public string featuredAchievementId { get; set; }
 		public string id { get; set; }
@@ -43,7 +43,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Models {
 		public int uiOrderHint { get; set; }
 	}
 
-	public class StarcraftStaticProfileReward {
+	public class Starcraft2StaticProfileReward {
 		public int flags { get; set; }
 		public string id { get; set; }
 		public string achievementId { get; set; }

@@ -1,5 +1,5 @@
 ﻿namespace Dysnomia.Common.BlizzardWebAPI.Models {
-	public class StarcraftAccount {
+	public class Starcraft2Account {
 		public string name { get; set; }
 		public string profileUrl { get; set; }
 		public string avatarUrl { get; set; }
