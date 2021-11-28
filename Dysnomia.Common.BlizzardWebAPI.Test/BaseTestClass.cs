@@ -2,6 +2,7 @@
 
 using Microsoft.Extensions.Configuration;
 
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Dysnomia.Common.BlizzardWebAPI.Test {
@@ -18,7 +19,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		protected Task<AccessTokenResponse> authCodeFlowToken;
 		protected Task<AccessTokenResponse> clientCredentialFlowToken;
 
-		public BaseTestClass() {
+		public BaseTestClass(IHttpClientFactory httpClientFactory) {
 			var config = new ConfigurationBuilder()
 				.AddUserSecrets<BaseTestClass>()
 				.AddJsonFile("appsettings.json")
@@ -32,7 +33,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 			BattleNetHeroId = ulong.Parse(config["BattleNetHeroId"]);
 			REDIRECT_URI = config["REDIRECT_URI"];
 
-			var tokenQuerier = new TokenQuerier(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, "eu");
+			var tokenQuerier = new TokenQuerier(httpClientFactory, CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, "eu");
 			authCodeFlowToken = tokenQuerier.GetAuthorizationCodeFlow("TODO");
 			clientCredentialFlowToken = tokenQuerier.GetClientCredentialFlow();
 		}

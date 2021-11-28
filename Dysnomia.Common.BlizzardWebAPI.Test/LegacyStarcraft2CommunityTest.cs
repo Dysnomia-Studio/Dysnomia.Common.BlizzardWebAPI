@@ -1,6 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using Dysnomia.Common.BlizzardWebAPI.Enums;
 
-using Dysnomia.Common.BlizzardWebAPI.Enums;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 using Xunit;
 
@@ -8,8 +9,8 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 	public class LegacyStarcraft2CommunityTest : BaseTestClass {
 		protected readonly ILegacyStarcraft2Community legacyStarcraftCommunity;
 
-		public LegacyStarcraft2CommunityTest() {
-			this.legacyStarcraftCommunity = new LegacyStarcraft2Community();
+		public LegacyStarcraft2CommunityTest(IHttpClientFactory httpClientFactory, ILegacyStarcraft2Community legacyStarcraftCommunity) : base(httpClientFactory) {
+			this.legacyStarcraftCommunity = legacyStarcraftCommunity;
 		}
 
 		[Fact]

@@ -1,13 +1,17 @@
-﻿using System.Threading.Tasks;
-
-using Dysnomia.Common.BlizzardWebAPI.Enums;
+﻿using Dysnomia.Common.BlizzardWebAPI.Enums;
 using Dysnomia.Common.BlizzardWebAPI.Models;
+
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Dysnomia.Common.BlizzardWebAPI {
 	/// <summary>
 	/// See https://develop.battle.net/documentation/starcraft-2/community-apis, under "Legacy API"
 	/// </summary>
 	public class LegacyStarcraft2Community : BlizzardWebAPIQuerier, ILegacyStarcraft2Community {
+		public LegacyStarcraft2Community(IHttpClientFactory clientFactory) : base(clientFactory) {
+		}
+
 		/// <summary>
 		/// Retrieves data about an individual Starcraft2 profile.
 		/// </summary>

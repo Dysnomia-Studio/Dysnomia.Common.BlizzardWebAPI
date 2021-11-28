@@ -4,6 +4,7 @@ using Dysnomia.Common.WebAPIWrapper;
 
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Dysnomia.Common.BlizzardWebAPI {
@@ -12,6 +13,9 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 	/// https://develop.battle.net/documentation/diablo-3/community-apis
 	/// </summary>
 	public class Diablo3Community : WebAPIQuerier, IDiablo3Community {
+		public Diablo3Community(IHttpClientFactory clientFactory) : base(clientFactory) {
+		}
+
 		/// <summary>
 		/// Get image URL from type, size and icon in blizzard CDN.
 		/// Warning: this CDN only supports HTTP, not HTTPS

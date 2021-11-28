@@ -1,15 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-using Dysnomia.Common.BlizzardWebAPI.Enums;
+﻿using Dysnomia.Common.BlizzardWebAPI.Enums;
 using Dysnomia.Common.BlizzardWebAPI.Models;
+
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Dysnomia.Common.BlizzardWebAPI {
 	/// <summary>
 	/// See https://develop.battle.net/documentation/starcraft-2/community-apis
 	/// </summary>
 	public class Starcraft2Community : BlizzardWebAPIQuerier, IStarcraft2Community {
+		public Starcraft2Community(IHttpClientFactory clientFactory) : base(clientFactory) {
+		}
+
 		/// <summary>
 		/// Returns all static Starcraft2 profile data (achievements, categories, criteria, and rewards).
 		/// </summary>

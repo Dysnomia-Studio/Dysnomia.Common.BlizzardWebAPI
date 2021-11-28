@@ -2,6 +2,7 @@
 
 using System;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 using Xunit;
@@ -10,8 +11,8 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 	public class Diablo3CommunityTest : BaseTestClass {
 		protected readonly IDiablo3Community diablo3Community;
 
-		public Diablo3CommunityTest() {
-			this.diablo3Community = new Diablo3Community();
+		public Diablo3CommunityTest(IHttpClientFactory httpClientFactory, IDiablo3Community diablo3Community) : base(httpClientFactory) {
+			this.diablo3Community = diablo3Community;
 		}
 
 		[Theory]
