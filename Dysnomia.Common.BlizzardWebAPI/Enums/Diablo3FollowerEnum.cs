@@ -1,5 +1,5 @@
 ﻿namespace Dysnomia.Common.BlizzardWebAPI.Enums {
-	public enum Follower {
+	public enum Diablo3FollowerEnum {
 		templar
 	}
 }

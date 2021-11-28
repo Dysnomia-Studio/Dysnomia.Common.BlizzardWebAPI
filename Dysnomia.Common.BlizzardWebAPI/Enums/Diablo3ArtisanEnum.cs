@@ -1,5 +1,5 @@
 ﻿namespace Dysnomia.Common.BlizzardWebAPI.Enums {
-	public enum Artisan {
+	public enum Diablo3ArtisanEnum {
 		blacksmith
 	}
 }

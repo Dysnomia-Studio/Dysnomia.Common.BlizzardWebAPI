@@ -4,29 +4,65 @@
 ## Contents
 
 - [Diablo3Community](#T-Dysnomia-Common-BlizzardWebAPI-Diablo3Community 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community')
+  - [GetAccount(accessToken,region,account,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetAccount-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetAccount(System.String,System.String,System.String,System.String)')
+  - [GetAccount(accessToken,region,account,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetAccount(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.String)')
   - [GetAct(accessToken,region,actId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetAct-System-String,System-String,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetAct(System.String,System.String,System.Int32,System.String)')
   - [GetAct(accessToken,region,actId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetAct-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetAct(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.Int32,System.String)')
   - [GetActIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetActIndex-System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetActIndex(System.String,System.String,System.String)')
   - [GetActIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetActIndex-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetActIndex(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String)')
+  - [GetApiSkill(accessToken,region,classSlug,skillSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetApiSkill-System-String,System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetApiSkill(System.String,System.String,System.String,System.String,System.String)')
+  - [GetApiSkill(accessToken,region,classSlug,skillSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetApiSkill-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3SkillEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetApiSkill(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3SkillEnum,System.String)')
   - [GetArtisan(accessToken,region,artisanSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetArtisan-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetArtisan(System.String,System.String,System.String,System.String)')
-  - [GetArtisan(accessToken,region,artisanSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetArtisan(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String)')
+  - [GetArtisan(accessToken,region,artisanSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetArtisan(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum,System.String)')
+  - [GetCharacterClass(accessToken,region,classSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetCharacterClass-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetCharacterClass(System.String,System.String,System.String,System.String)')
+  - [GetCharacterClass(accessToken,region,classSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetCharacterClass-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetCharacterClass(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum,System.String)')
+  - [GetDetailedFollowersItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedFollowersItems-System-String,System-String,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetDetailedFollowersItems(System.String,System.String,System.String,System.UInt64,System.String)')
+  - [GetDetailedFollowersItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedFollowersItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetDetailedFollowersItems(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.UInt64,System.String)')
+  - [GetDetailedHeroItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedHeroItems-System-String,System-String,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetDetailedHeroItems(System.String,System.String,System.String,System.UInt64,System.String)')
+  - [GetDetailedHeroItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedHeroItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetDetailedHeroItems(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.UInt64,System.String)')
   - [GetFollower(accessToken,region,followerSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetFollower-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetFollower(System.String,System.String,System.String,System.String)')
-  - [GetFollower(accessToken,region,followerSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Follower,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetFollower(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Follower,System.String)')
+  - [GetFollower(accessToken,region,followerSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3FollowerEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetFollower(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3FollowerEnum,System.String)')
+  - [GetHero(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetHero-System-String,System-String,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetHero(System.String,System.String,System.String,System.UInt64,System.String)')
+  - [GetHero(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetHero-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetHero(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.UInt64,System.String)')
   - [GetImage(type,size,icon)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetImage-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ImageType,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetImage(Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ImageType,System.String,System.String)')
+  - [GetItem(accessToken,region,itemSlugAndId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItem-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetItem(System.String,System.String,System.String,System.String)')
+  - [GetItem(accessToken,region,itemSlugAndId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItem-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetItem(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.String)')
+  - [GetItemType(accessToken,region,itemTypeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemType-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetItemType(System.String,System.String,System.String,System.String)')
+  - [GetItemType(accessToken,region,itemTypeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemType-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetItemType(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.String)')
+  - [GetItemTypeIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemTypeIndex-System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetItemTypeIndex(System.String,System.String,System.String)')
+  - [GetItemTypeIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemTypeIndex-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetItemTypeIndex(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String)')
   - [GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetRecipe-System-String,System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetRecipe(System.String,System.String,System.String,System.String,System.String)')
-  - [GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetRecipe(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String,System.String)')
+  - [GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.Diablo3Community.GetRecipe(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum,System.String,System.String)')
 - [IDiablo3Community](#T-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community')
+  - [GetAccount(accessToken,region,account,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetAccount-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetAccount(System.String,System.String,System.String,System.String)')
+  - [GetAccount(accessToken,region,account,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetAccount(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.String)')
   - [GetAct(accessToken,region,actId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetAct-System-String,System-String,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetAct(System.String,System.String,System.Int32,System.String)')
   - [GetAct(accessToken,region,actId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetAct-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-Int32,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetAct(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.Int32,System.String)')
   - [GetActIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetActIndex-System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetActIndex(System.String,System.String,System.String)')
   - [GetActIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetActIndex-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetActIndex(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String)')
+  - [GetApiSkill(accessToken,region,classSlug,skillSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetApiSkill-System-String,System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetApiSkill(System.String,System.String,System.String,System.String,System.String)')
+  - [GetApiSkill(accessToken,region,classSlug,skillSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetApiSkill-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3SkillEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetApiSkill(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3SkillEnum,System.String)')
   - [GetArtisan(accessToken,region,artisanSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetArtisan-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetArtisan(System.String,System.String,System.String,System.String)')
-  - [GetArtisan(accessToken,region,artisanSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetArtisan(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String)')
+  - [GetArtisan(accessToken,region,artisanSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetArtisan(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum,System.String)')
+  - [GetCharacterClass(accessToken,region,classSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetCharacterClass-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetCharacterClass(System.String,System.String,System.String,System.String)')
+  - [GetCharacterClass(accessToken,region,classSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetCharacterClass-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetCharacterClass(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum,System.String)')
+  - [GetDetailedFollowersItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedFollowersItems-System-String,System-String,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetDetailedFollowersItems(System.String,System.String,System.String,System.UInt64,System.String)')
+  - [GetDetailedFollowersItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedFollowersItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetDetailedFollowersItems(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.UInt64,System.String)')
+  - [GetDetailedHeroItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedHeroItems-System-String,System-String,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetDetailedHeroItems(System.String,System.String,System.String,System.UInt64,System.String)')
+  - [GetDetailedHeroItems(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedHeroItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetDetailedHeroItems(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.UInt64,System.String)')
   - [GetFollower(accessToken,region,followerSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetFollower-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetFollower(System.String,System.String,System.String,System.String)')
-  - [GetFollower(accessToken,region,followerSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Follower,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetFollower(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Follower,System.String)')
+  - [GetFollower(accessToken,region,followerSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3FollowerEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetFollower(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3FollowerEnum,System.String)')
+  - [GetHero(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetHero-System-String,System-String,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetHero(System.String,System.String,System.String,System.UInt64,System.String)')
+  - [GetHero(accessToken,region,account,heroId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetHero-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetHero(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.UInt64,System.String)')
   - [GetImage(type,size,icon)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetImage-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ImageType,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetImage(Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ImageType,System.String,System.String)')
+  - [GetItem(accessToken,region,itemSlugAndId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItem-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetItem(System.String,System.String,System.String,System.String)')
+  - [GetItem(accessToken,region,itemSlugAndId,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItem-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetItem(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.String)')
+  - [GetItemType(accessToken,region,itemTypeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemType-System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetItemType(System.String,System.String,System.String,System.String)')
+  - [GetItemType(accessToken,region,itemTypeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemType-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetItemType(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String,System.String)')
+  - [GetItemTypeIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemTypeIndex-System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetItemTypeIndex(System.String,System.String,System.String)')
+  - [GetItemTypeIndex(accessToken,region,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemTypeIndex-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetItemTypeIndex(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,System.String)')
   - [GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetRecipe-System-String,System-String,System-String,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetRecipe(System.String,System.String,System.String,System.String,System.String)')
-  - [GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetRecipe(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Artisan,System.String,System.String)')
+  - [GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale)](#M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String,System-String- 'Dysnomia.Common.BlizzardWebAPI.IDiablo3Community.GetRecipe(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum,System.String,System.String)')
 - [ILegacyStarcraft2Community](#T-Dysnomia-Common-BlizzardWebAPI-ILegacyStarcraft2Community 'Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraft2Community')
   - [GetPlayerProfile(accessToken,region,regionId,realmId,profileId)](#M-Dysnomia-Common-BlizzardWebAPI-ILegacyStarcraft2Community-GetPlayerProfile-System-String,System-String,System-Int32,System-Int32,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraft2Community.GetPlayerProfile(System.String,System.String,System.Int32,System.Int32,System.UInt64)')
   - [GetPlayerProfile(accessToken,region,regionId,realmId,profileId)](#M-Dysnomia-Common-BlizzardWebAPI-ILegacyStarcraft2Community-GetPlayerProfile-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-StarCraft2RealmEnum,System-UInt64- 'Dysnomia.Common.BlizzardWebAPI.ILegacyStarcraft2Community.GetPlayerProfile(System.String,Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RegionEnum,Dysnomia.Common.BlizzardWebAPI.Enums.StarCraft2RealmEnum,System.UInt64)')
@@ -82,6 +118,46 @@ Dysnomia.Common.BlizzardWebAPI
 
 Diablo III community APIs provide endpoints for Diablo III player profiles.
 https://develop.battle.net/documentation/diablo-3/community-apis
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetAccount-System-String,System-String,System-String,System-String-'></a>
+### GetAccount(accessToken,region,account,locale) `method`
+
+##### Summary
+
+Returns the specified account profile.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String-'></a>
+### GetAccount(accessToken,region,account,locale) `method`
+
+##### Summary
+
+Returns the specified account profile.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetAct-System-String,System-String,System-Int32,System-String-'></a>
 ### GetAct(accessToken,region,actId,locale) `method`
@@ -161,6 +237,48 @@ Returns an index of acts.
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetApiSkill-System-String,System-String,System-String,System-String,System-String-'></a>
+### GetApiSkill(accessToken,region,classSlug,skillSlug,locale) `method`
+
+##### Summary
+
+Returns a single skill by slug for a specific character class.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| classSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the character class to retrieve. |
+| skillSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the skill to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetApiSkill-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3SkillEnum,System-String-'></a>
+### GetApiSkill(accessToken,region,classSlug,skillSlug,locale) `method`
+
+##### Summary
+
+Returns a single skill by slug for a specific character class.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| classSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum') | The slug of the character class to retrieve. |
+| skillSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3SkillEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3SkillEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3SkillEnum') | The slug of the skill to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
 <a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetArtisan-System-String,System-String,System-String,System-String-'></a>
 ### GetArtisan(accessToken,region,artisanSlug,locale) `method`
 
@@ -181,7 +299,7 @@ Returns a single artisan by slug.
 | artisanSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the artisan to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
-<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String-'></a>
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String-'></a>
 ### GetArtisan(accessToken,region,artisanSlug,locale) `method`
 
 ##### Summary
@@ -198,7 +316,131 @@ Returns a single artisan by slug.
 | ---- | ---- | ----------- |
 | accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
-| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Artisan](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Artisan 'Dysnomia.Common.BlizzardWebAPI.Enums.Artisan') | The slug of the artisan to retrieve. |
+| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum') | The slug of the artisan to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetCharacterClass-System-String,System-String,System-String,System-String-'></a>
+### GetCharacterClass(accessToken,region,classSlug,locale) `method`
+
+##### Summary
+
+Returns a single character class by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| classSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the character class to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetCharacterClass-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,System-String-'></a>
+### GetCharacterClass(accessToken,region,classSlug,locale) `method`
+
+##### Summary
+
+Returns a single character class by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| classSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum') | The slug of the character class to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedFollowersItems-System-String,System-String,System-String,System-UInt64,System-String-'></a>
+### GetDetailedFollowersItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero's followers.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedFollowersItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String-'></a>
+### GetDetailedFollowersItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero's followers.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedHeroItems-System-String,System-String,System-String,System-UInt64,System-String-'></a>
+### GetDetailedHeroItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetDetailedHeroItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String-'></a>
+### GetDetailedHeroItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetFollower-System-String,System-String,System-String,System-String-'></a>
@@ -221,7 +463,7 @@ Returns a single follower by slug.
 | followerSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the follower to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
-<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Follower,System-String-'></a>
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3FollowerEnum,System-String-'></a>
 ### GetFollower(accessToken,region,followerSlug,locale) `method`
 
 ##### Summary
@@ -238,7 +480,49 @@ Returns a single follower by slug.
 | ---- | ---- | ----------- |
 | accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
-| followerSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Follower](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Follower 'Dysnomia.Common.BlizzardWebAPI.Enums.Follower') | The slug of the follower to retrieve. |
+| followerSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3FollowerEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3FollowerEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3FollowerEnum') | The slug of the follower to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetHero-System-String,System-String,System-String,System-UInt64,System-String-'></a>
+### GetHero(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a single hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetHero-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String-'></a>
+### GetHero(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a single hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetImage-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ImageType,System-String,System-String-'></a>
@@ -261,6 +545,124 @@ Warning: this CDN only supports HTTP, not HTTPS
 | size | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The size: for items must either be small or large; for skills must be 21, 42, or 64 (These values refer to the image size in pixels). |
 | icon | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Icon name without extension |
 
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItem-System-String,System-String,System-String,System-String-'></a>
+### GetItem(accessToken,region,itemSlugAndId,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| itemSlugAndId | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItem-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String-'></a>
+### GetItem(accessToken,region,itemSlugAndId,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| itemSlugAndId | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemType-System-String,System-String,System-String,System-String-'></a>
+### GetItemType(accessToken,region,itemTypeSlug,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| itemTypeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemType-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String-'></a>
+### GetItemType(accessToken,region,itemTypeSlug,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| itemTypeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemTypeIndex-System-String,System-String,System-String-'></a>
+### GetItemTypeIndex(accessToken,region,locale) `method`
+
+##### Summary
+
+Returns an index of item types.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetItemTypeIndex-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String-'></a>
+### GetItemTypeIndex(accessToken,region,locale) `method`
+
+##### Summary
+
+Returns an index of item types.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
 <a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetRecipe-System-String,System-String,System-String,System-String,System-String-'></a>
 ### GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale) `method`
 
@@ -282,7 +684,7 @@ Returns a single recipe by slug for the specified artisan.
 | recipeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the recipe to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
-<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String,System-String-'></a>
+<a name='M-Dysnomia-Common-BlizzardWebAPI-Diablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String,System-String-'></a>
 ### GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale) `method`
 
 ##### Summary
@@ -299,7 +701,7 @@ Returns a single recipe by slug for the specified artisan.
 | ---- | ---- | ----------- |
 | accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
-| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Artisan](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Artisan 'Dysnomia.Common.BlizzardWebAPI.Enums.Artisan') | The slug of the artisan to retrieve. |
+| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum') | The slug of the artisan to retrieve. |
 | recipeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the recipe to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
@@ -314,6 +716,46 @@ Dysnomia.Common.BlizzardWebAPI
 
 Diablo III community APIs provide endpoints for Diablo III player profiles.
 https://develop.battle.net/documentation/diablo-3/community-apis
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetAccount-System-String,System-String,System-String,System-String-'></a>
+### GetAccount(accessToken,region,account,locale) `method`
+
+##### Summary
+
+Returns the specified account profile.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetAccount-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String-'></a>
+### GetAccount(accessToken,region,account,locale) `method`
+
+##### Summary
+
+Returns the specified account profile.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetAct-System-String,System-String,System-Int32,System-String-'></a>
 ### GetAct(accessToken,region,actId,locale) `method`
@@ -393,6 +835,48 @@ Returns an index of acts.
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetApiSkill-System-String,System-String,System-String,System-String,System-String-'></a>
+### GetApiSkill(accessToken,region,classSlug,skillSlug,locale) `method`
+
+##### Summary
+
+Returns a single skill by slug for a specific character class.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| classSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the character class to retrieve. |
+| skillSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the skill to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetApiSkill-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3SkillEnum,System-String-'></a>
+### GetApiSkill(accessToken,region,classSlug,skillSlug,locale) `method`
+
+##### Summary
+
+Returns a single skill by slug for a specific character class.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| classSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum') | The slug of the character class to retrieve. |
+| skillSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3SkillEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3SkillEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3SkillEnum') | The slug of the skill to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
 <a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetArtisan-System-String,System-String,System-String,System-String-'></a>
 ### GetArtisan(accessToken,region,artisanSlug,locale) `method`
 
@@ -413,7 +897,7 @@ Returns a single artisan by slug.
 | artisanSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the artisan to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
-<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String-'></a>
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetArtisan-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String-'></a>
 ### GetArtisan(accessToken,region,artisanSlug,locale) `method`
 
 ##### Summary
@@ -430,7 +914,131 @@ Returns a single artisan by slug.
 | ---- | ---- | ----------- |
 | accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
-| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Artisan](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Artisan 'Dysnomia.Common.BlizzardWebAPI.Enums.Artisan') | The slug of the artisan to retrieve. |
+| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum') | The slug of the artisan to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetCharacterClass-System-String,System-String,System-String,System-String-'></a>
+### GetCharacterClass(accessToken,region,classSlug,locale) `method`
+
+##### Summary
+
+Returns a single character class by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| classSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the character class to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetCharacterClass-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum,System-String-'></a>
+### GetCharacterClass(accessToken,region,classSlug,locale) `method`
+
+##### Summary
+
+Returns a single character class by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| classSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ClassEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ClassEnum') | The slug of the character class to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedFollowersItems-System-String,System-String,System-String,System-UInt64,System-String-'></a>
+### GetDetailedFollowersItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero's followers.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedFollowersItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String-'></a>
+### GetDetailedFollowersItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero's followers.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedHeroItems-System-String,System-String,System-String,System-UInt64,System-String-'></a>
+### GetDetailedHeroItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetDetailedHeroItems-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String-'></a>
+### GetDetailedHeroItems(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a list of items for the specified hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetFollower-System-String,System-String,System-String,System-String-'></a>
@@ -453,7 +1061,7 @@ Returns a single follower by slug.
 | followerSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the follower to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
-<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Follower,System-String-'></a>
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetFollower-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3FollowerEnum,System-String-'></a>
 ### GetFollower(accessToken,region,followerSlug,locale) `method`
 
 ##### Summary
@@ -470,7 +1078,49 @@ Returns a single follower by slug.
 | ---- | ---- | ----------- |
 | accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
-| followerSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Follower](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Follower 'Dysnomia.Common.BlizzardWebAPI.Enums.Follower') | The slug of the follower to retrieve. |
+| followerSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3FollowerEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3FollowerEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3FollowerEnum') | The slug of the follower to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetHero-System-String,System-String,System-String,System-UInt64,System-String-'></a>
+### GetHero(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a single hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetHero-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-UInt64,System-String-'></a>
+### GetHero(accessToken,region,account,heroId,locale) `method`
+
+##### Summary
+
+Returns a single hero.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| account | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The BattleTag for the account to retrieve. |
+| heroId | [System.UInt64](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.UInt64 'System.UInt64') | The ID of the hero to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetImage-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ImageType,System-String,System-String-'></a>
@@ -491,6 +1141,124 @@ Get image URL from type, size and icon in blizzard CDN
 | type | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ImageType](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ImageType 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ImageType') | The image type (items or skills) |
 | size | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The size: for items must either be small or large; for skills must be 21, 42, or 64 (These values refer to the image size in pixels). |
 | icon | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Icon name without extension |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItem-System-String,System-String,System-String,System-String-'></a>
+### GetItem(accessToken,region,itemSlugAndId,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| itemSlugAndId | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItem-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String-'></a>
+### GetItem(accessToken,region,itemSlugAndId,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| itemSlugAndId | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemType-System-String,System-String,System-String,System-String-'></a>
+### GetItemType(accessToken,region,itemTypeSlug,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| itemTypeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemType-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String,System-String-'></a>
+### GetItemType(accessToken,region,itemTypeSlug,locale) `method`
+
+##### Summary
+
+Returns a single item type by slug.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| itemTypeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the item type to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemTypeIndex-System-String,System-String,System-String-'></a>
+### GetItemTypeIndex(accessToken,region,locale) `method`
+
+##### Summary
+
+Returns an index of item types.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The region of the data to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
+
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetItemTypeIndex-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,System-String-'></a>
+### GetItemTypeIndex(accessToken,region,locale) `method`
+
+##### Summary
+
+Returns an index of item types.
+
+##### Returns
+
+
+
+##### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
+| region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
+| locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
 <a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetRecipe-System-String,System-String,System-String,System-String,System-String-'></a>
 ### GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale) `method`
@@ -513,7 +1281,7 @@ Returns a single recipe by slug for the specified artisan.
 | recipeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the recipe to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 
-<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Artisan,System-String,System-String-'></a>
+<a name='M-Dysnomia-Common-BlizzardWebAPI-IDiablo3Community-GetRecipe-System-String,Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum,Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum,System-String,System-String-'></a>
 ### GetRecipe(accessToken,region,artisanSlug,recipeSlug,locale) `method`
 
 ##### Summary
@@ -530,7 +1298,7 @@ Returns a single recipe by slug for the specified artisan.
 | ---- | ---- | ----------- |
 | accessToken | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | Client credential flow access token |
 | region | [Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-RegionEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.RegionEnum') | The region of the data to retrieve. |
-| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Artisan](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Artisan 'Dysnomia.Common.BlizzardWebAPI.Enums.Artisan') | The slug of the artisan to retrieve. |
+| artisanSlug | [Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum](#T-Dysnomia-Common-BlizzardWebAPI-Enums-Diablo3ArtisanEnum 'Dysnomia.Common.BlizzardWebAPI.Enums.Diablo3ArtisanEnum') | The slug of the artisan to retrieve. |
 | recipeSlug | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The slug of the recipe to retrieve. |
 | locale | [System.String](http://msdn.microsoft.com/query/dev14.query?appId=Dev14IDEF1&l=EN-US&k=k:System.String 'System.String') | The locale to reflect in localized data. |
 

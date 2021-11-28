@@ -1,8 +1,8 @@
-﻿using System.Threading.Tasks;
-
-using Dysnomia.Common.BlizzardWebAPI.Models;
+﻿using Dysnomia.Common.BlizzardWebAPI.Models;
 
 using Microsoft.Extensions.Configuration;
+
+using System.Threading.Tasks;
 
 namespace Dysnomia.Common.BlizzardWebAPI.Test {
 	public abstract class BaseTestClass {
@@ -10,6 +10,8 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		protected string CLIENT_SECRET = "";
 		protected ulong BattleNetAccountId = 0;
 		protected ulong BattleNetProfileId = 0;
+		protected string BattleNetBattleTag = "";
+		protected ulong BattleNetHeroId = 0;
 		protected const ulong INVALID_BNETID = 0;
 		protected string REDIRECT_URI = "";
 
@@ -26,6 +28,8 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 			CLIENT_SECRET = config["CLIENT_SECRET"];
 			BattleNetAccountId = ulong.Parse(config["BattleNetAccountId"]);
 			BattleNetProfileId = ulong.Parse(config["BattleNetProfileId"]);
+			BattleNetBattleTag = config["BattleNetBattleTag"];
+			BattleNetHeroId = ulong.Parse(config["BattleNetHeroId"]);
 			REDIRECT_URI = config["REDIRECT_URI"];
 
 			var tokenQuerier = new TokenQuerier(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI, "eu");

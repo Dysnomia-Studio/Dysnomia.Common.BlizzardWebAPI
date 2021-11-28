@@ -1,7 +1,7 @@
-﻿using System.Threading.Tasks;
-
-using Dysnomia.Common.BlizzardWebAPI.Enums;
+﻿using Dysnomia.Common.BlizzardWebAPI.Enums;
 using Dysnomia.Common.BlizzardWebAPI.Models;
+
+using System.Threading.Tasks;
 
 namespace Dysnomia.Common.BlizzardWebAPI {
 	/// <summary>
@@ -60,7 +60,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		Task<Models.Starcraft2Profile> GetProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US");
+		Task<Starcraft2Profile> GetProfile(string accessToken, string region, int regionId, int realmId, ulong profileId, string locale = "en_US");
 		/// <summary>
 		/// Returns data about an individual Starcraft2 profile.
 		/// </summary>
@@ -71,7 +71,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">The profile ID</param>
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
-		Task<Models.Starcraft2Profile> GetProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US");
+		Task<Starcraft2Profile> GetProfile(string accessToken, RegionEnum region, StarCraft2RegionEnum regionId, StarCraft2RealmEnum realmId, ulong profileId, string locale = "en_US");
 
 		/// <summary>
 		/// Returns a ladder summary for an individual Starcraft2 profile.

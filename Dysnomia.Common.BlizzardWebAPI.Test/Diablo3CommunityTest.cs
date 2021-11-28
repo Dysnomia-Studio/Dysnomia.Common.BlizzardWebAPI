@@ -1,7 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using Dysnomia.Common.BlizzardWebAPI.Enums;
 
-using Dysnomia.Common.BlizzardWebAPI.Enums;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 using Xunit;
 
@@ -52,7 +53,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetArtisan_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await diablo3Community.GetArtisan(token, RegionEnum.EU, Artisan.blacksmith);
+			var res = await diablo3Community.GetArtisan(token, RegionEnum.EU, Diablo3ArtisanEnum.blacksmith);
 			Assert.True(res != null);
 		}
 
@@ -60,7 +61,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetRecipe_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await diablo3Community.GetRecipe(token, RegionEnum.EU, Artisan.blacksmith, "apprentice-flamberge");
+			var res = await diablo3Community.GetRecipe(token, RegionEnum.EU, Diablo3ArtisanEnum.blacksmith, "apprentice-flamberge");
 			Assert.True(res != null);
 		}
 
@@ -68,7 +69,81 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 		public async Task GetFollower_OK() {
 			var token = (await this.clientCredentialFlowToken).access_token;
 
-			var res = await diablo3Community.GetFollower(token, RegionEnum.EU, Follower.templar);
+			var res = await diablo3Community.GetFollower(token, RegionEnum.EU, Diablo3FollowerEnum.templar);
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetCharacterClass_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetCharacterClass(token, RegionEnum.EU, Diablo3ClassEnum.barbarian);
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetApiSkill_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetApiSkill(token, RegionEnum.EU, Diablo3ClassEnum.barbarian, Diablo3SkillEnum.bash);
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetItemTypeIndex_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetItemTypeIndex(token, RegionEnum.EU);
+			Assert.True(res != null);
+			Assert.True(res.Any());
+		}
+
+		[Fact]
+		public async Task GetItemType_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetItemType(token, RegionEnum.EU, "sword2h");
+			Assert.True(res != null);
+			Assert.True(res.Any());
+		}
+
+		[Fact]
+		public async Task GetItem_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetItem(token, RegionEnum.EU, "corrupted-ashbringer-Unique_Sword_2H_104_x1");
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetAccount_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetAccount(token, RegionEnum.EU, BattleNetBattleTag);
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetHero_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetHero(token, RegionEnum.EU, BattleNetBattleTag, BattleNetHeroId);
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetDetailedHeroItems_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetDetailedHeroItems(token, RegionEnum.EU, BattleNetBattleTag, BattleNetHeroId);
+			Assert.True(res != null);
+		}
+
+		[Fact]
+		public async Task GetDetailedFollowersItems_OK() {
+			var token = (await this.clientCredentialFlowToken).access_token;
+
+			var res = await diablo3Community.GetDetailedFollowersItems(token, RegionEnum.EU, BattleNetBattleTag, BattleNetHeroId);
 			Assert.True(res != null);
 		}
 	}
