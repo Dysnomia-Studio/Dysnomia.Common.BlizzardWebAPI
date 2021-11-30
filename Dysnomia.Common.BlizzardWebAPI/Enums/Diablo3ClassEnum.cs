@@ -1,5 +1,11 @@
 ﻿namespace Dysnomia.Common.BlizzardWebAPI.Enums {
 	public enum Diablo3ClassEnum {
-		barbarian
+		demonhunter,
+		barbarian,
+		witchdoctor,
+		necromancer,
+		wizard,
+		monk,
+		crusader
 	}
 }
