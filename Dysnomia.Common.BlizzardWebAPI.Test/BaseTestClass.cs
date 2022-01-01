@@ -21,7 +21,7 @@ namespace Dysnomia.Common.BlizzardWebAPI.Test {
 
 		public BaseTestClass(IHttpClientFactory httpClientFactory) {
 			var config = new ConfigurationBuilder()
-				.AddUserSecrets<BaseTestClass>()
+				.AddUserSecrets<BaseTestClass>(optional: true)
 				.AddJsonFile("appsettings.json")
 				.Build();
 
