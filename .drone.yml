@@ -47,6 +47,7 @@ steps:
       - BATTLENETPROFILEID
       - CLIENT_ID
       - CLIENT_SECRET
+      - DRONE_BRANCH
       - SONAR_HOST
       - SONAR_TOKEN
   when:
