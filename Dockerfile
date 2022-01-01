@@ -1,12 +1,13 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0
 WORKDIR /app
 
-ARG SONAR_HOST
-ARG SONAR_TOKEN
-ARG CLIENT_SECRET
-ARG CLIENT_ID
 ARG BATTLENETACCOUNTID
 ARG BATTLENETPROFILEID
+ARG CLIENT_ID
+ARG CLIENT_SECRET
+ARG DRONE_BRANCH
+ARG SONAR_HOST
+ARG SONAR_TOKEN
 
 # Install sonarScanner
 RUN dotnet tool install --global dotnet-sonarscanner
@@ -29,7 +30,7 @@ RUN jq ".CLIENT_ID = \"$CLIENT_ID\"" Dysnomia.Common.BlizzardWebAPI.Test/appsett
 RUN jq ".BattleNetAccountId = \"$BATTLENETACCOUNTID\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
 RUN jq ".BattleNetProfileId = \"$BATTLENETPROFILEID\"" Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json > tmp.appsettings.json && mv tmp.appsettings.json Dysnomia.Common.BlizzardWebAPI.Test/appsettings.json
 
-RUN dotnet sonarscanner begin /k:"dysnomia-common-blizzardwebapi" /d:sonar.host.url="$SONAR_HOST" /d:sonar.login="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"
+RUN dotnet sonarscanner begin /k:"dysnomia-common-blizzardwebapi" /d:sonar.host.url="$SONAR_HOST" /d:sonar.login="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.branch.name="$DRONE_BRANCH"
 RUN dotnet restore Dysnomia.Common.BlizzardWebAPI.sln --ignore-failed-sources /p:EnableDefaultItems=false
 RUN dotnet build Dysnomia.Common.BlizzardWebAPI.sln /m:1 --no-restore -c Release -o out
 RUN dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover

@@ -23,32 +23,32 @@ steps:
   settings:
     repo: dysnomia/dysnomia-common-blizzardwebapi
     dockerfile: Dockerfile
-    tags: ${DRONE_BRANCH}
+    tags: ${DRONE_BRANCH//\//-}
     dry_run: true
     pull-image: false
   environment:
     PLUGIN_PULL_IMAGE: false
-    SONAR_HOST: 
-      from_secret: SONAR_HOST
-    SONAR_TOKEN: 
-      from_secret: SONAR_TOKEN
-    CLIENT_SECRET: 
-      from_secret: CLIENT_SECRET
-    CLIENT_ID: 
-      from_secret: CLIENT_ID
     BATTLENETACCOUNTID: 
       from_secret: BATTLENETACCOUNTID
     BATTLENETPROFILEID: 
       from_secret: BATTLENETPROFILEID
+    CLIENT_ID: 
+      from_secret: CLIENT_ID
+    CLIENT_SECRET: 
+      from_secret: CLIENT_SECRET
+    DRONE_BRANCH: ${DRONE_BRANCH}
+    SONAR_HOST: 
+      from_secret: SONAR_HOST
+    SONAR_TOKEN: 
+      from_secret: SONAR_TOKEN
   settings:
     build_args_from_env:
-      - SONAR_HOST
-      - SONAR_TOKEN
-      - CLIENT_SECRET
-      - CLIENT_ID
       - BATTLENETACCOUNTID
       - BATTLENETPROFILEID
-
+      - CLIENT_ID
+      - CLIENT_SECRET
+      - SONAR_HOST
+      - SONAR_TOKEN
   when:
     event:
     - push
