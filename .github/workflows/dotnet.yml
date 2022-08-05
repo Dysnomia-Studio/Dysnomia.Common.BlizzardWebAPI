@@ -23,8 +23,11 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       env:
-        PUBLISHER_KEY: ${{ secrets.PUBLISHER_KEY }}
-        STEAMID: ${{ secrets.STEAMID }}
-        STEAMPROFILE: ${{ secrets.STEAMPROFILE }}
-        WEBAPI_KEY: ${{ secrets.WEBAPI_KEY }}
+        BattleNetAccountId: ${{ secrets.BATTLENETACCOUNTID }}
+        BattleNetBattleTag: ${{ secrets.BATTLENETBATTLETAG }}
+        BattleNetHeroId: ${{ secrets.BATTLENETHEROID }}
+        BattleNetProfileId: ${{ secrets.BATTLENETPROFILEID }}
+        CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+        CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+        REDIRECT_URI: ${{ secrets.BLIZZARD_REDIRECT_URI }}
       run: dotnet test --no-build --verbosity normal
