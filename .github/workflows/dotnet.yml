@@ -1,0 +1,30 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      env:
+        PUBLISHER_KEY: ${{ secrets.PUBLISHER_KEY }}
+        STEAMID: ${{ secrets.STEAMID }}
+        STEAMPROFILE: ${{ secrets.STEAMPROFILE }}
+        WEBAPI_KEY: ${{ secrets.WEBAPI_KEY }}
+      run: dotnet test --no-build --verbosity normal
