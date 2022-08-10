@@ -29,5 +29,5 @@ jobs:
         BattleNetProfileId: ${{ secrets.BATTLENETPROFILEID }}
         CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
         CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
-        REDIRECT_URI: ${{ secrets.BLIZZARD_REDIRECT_URI }}
+        REDIRECT_URI: ${{ secrets.REDIRECT_URI }}
       run: dotnet test --no-build --verbosity normal
