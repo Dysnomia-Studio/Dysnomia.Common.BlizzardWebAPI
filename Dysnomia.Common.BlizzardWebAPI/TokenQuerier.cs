@@ -39,7 +39,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 				{ new StringContent("client_credentials"), "grant_type" }
 			};
 
-			return await this.Post<AccessTokenResponse>(
+			return await this.PostAsync<AccessTokenResponse>(
 				string.Format("https://{0}.battle.net/oauth/token", this.region),
 				content,
 				headers
@@ -66,7 +66,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 				{ new StringContent("authorization_code"), "grant_type" }
 			};
 
-			return await this.Post<AccessTokenResponse>(
+			return await this.PostAsync<AccessTokenResponse>(
 				string.Format("https://{0}.battle.net/oauth/token", this.region),
 				content,
 				headers

@@ -43,7 +43,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3ActIndex> GetActIndex(string accessToken, string region, string locale = "en_US") {
-			return await this.Get<Diablo3ActIndex>(
+			return await this.GetAsync<Diablo3ActIndex>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/act?locale={1}&access_token={2}",
 					region, locale, accessToken
@@ -71,7 +71,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3Act> GetAct(string accessToken, string region, int actId, string locale = "en_US") {
-			return await this.Get<Diablo3Act>(
+			return await this.GetAsync<Diablo3Act>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/act/{1}?locale={2}&access_token={3}",
 					region, actId, locale, accessToken
@@ -99,7 +99,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3Artisan> GetArtisan(string accessToken, string region, string artisanSlug, string locale = "en_US") {
-			return await this.Get<Diablo3Artisan>(
+			return await this.GetAsync<Diablo3Artisan>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/artisan/{1}?locale={2}&access_token={3}",
 					region, artisanSlug, locale, accessToken
@@ -128,7 +128,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3ArtisanTrainingTierRecipe> GetRecipe(string accessToken, string region, string artisanSlug, string recipeSlug, string locale = "en_US") {
-			return await this.Get<Diablo3ArtisanTrainingTierRecipe>(
+			return await this.GetAsync<Diablo3ArtisanTrainingTierRecipe>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/artisan/{1}/recipe/{2}?locale={3}&access_token={4}",
 					region, artisanSlug, recipeSlug, locale, accessToken
@@ -157,7 +157,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3Follower> GetFollower(string accessToken, string region, string followerSlug, string locale = "en_US") {
-			return await this.Get<Diablo3Follower>(
+			return await this.GetAsync<Diablo3Follower>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/follower/{1}?locale={2}&access_token={3}",
 					region, followerSlug, locale, accessToken
@@ -185,7 +185,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3CharacterClass> GetCharacterClass(string accessToken, string region, string classSlug, string locale = "en_US") {
-			return await this.Get<Diablo3CharacterClass>(
+			return await this.GetAsync<Diablo3CharacterClass>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/hero/{1}?locale={2}&access_token={3}",
 					region, classSlug, locale, accessToken
@@ -214,7 +214,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3Skill> GetApiSkill(string accessToken, string region, string classSlug, string skillSlug, string locale = "en_US") {
-			return await this.Get<Diablo3Skill>(
+			return await this.GetAsync<Diablo3Skill>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/hero/{1}/skill/{2}?locale={3}&access_token={4}",
 					region, classSlug, skillSlug, locale, accessToken
@@ -242,7 +242,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<IEnumerable<Diablo3ItemTypeIndex>> GetItemTypeIndex(string accessToken, string region, string locale = "en_US") {
-			return await this.Get<IEnumerable<Diablo3ItemTypeIndex>>(
+			return await this.GetAsync<IEnumerable<Diablo3ItemTypeIndex>>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/item-type?locale={1}&access_token={2}",
 					region, locale, accessToken
@@ -269,7 +269,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<IEnumerable<Diablo3ItemType>> GetItemType(string accessToken, string region, string itemTypeSlug, string locale = "en_US") {
-			return await this.Get<IEnumerable<Diablo3ItemType>>(
+			return await this.GetAsync<IEnumerable<Diablo3ItemType>>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/item-type/{1}?locale={2}&access_token={3}",
 					region, itemTypeSlug, locale, accessToken
@@ -297,7 +297,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3Item> GetItem(string accessToken, string region, string itemSlugAndId, string locale = "en_US") {
-			return await this.Get<Diablo3Item>(
+			return await this.GetAsync<Diablo3Item>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/data/item/{1}?locale={2}&access_token={3}",
 					region, itemSlugAndId, locale, accessToken
@@ -325,7 +325,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3Account> GetAccount(string accessToken, string region, string account, string locale = "en_US") {
-			return await this.Get<Diablo3Account>(
+			return await this.GetAsync<Diablo3Account>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/profile/{1}/?locale={2}&access_token={3}",
 					region, account.Replace("#", "%23"), locale, accessToken
@@ -354,7 +354,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3Hero> GetHero(string accessToken, string region, string account, ulong heroId, string locale = "en_US") {
-			return await this.Get<Diablo3Hero>(
+			return await this.GetAsync<Diablo3Hero>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/profile/{1}/hero/{2}?locale={3}&access_token={4}",
 					region, account.Replace("#", "%23"), heroId, locale, accessToken
@@ -384,7 +384,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3HeroDetailedItems> GetDetailedHeroItems(string accessToken, string region, string account, ulong heroId, string locale = "en_US") {
-			return await this.Get<Diablo3HeroDetailedItems>(
+			return await this.GetAsync<Diablo3HeroDetailedItems>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/profile/{1}/hero/{2}/items?locale={3}&access_token={4}",
 					region, account.Replace("#", "%23"), heroId, locale, accessToken
@@ -414,7 +414,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="locale">The locale to reflect in localized data.</param>
 		/// <returns></returns>
 		public async Task<Diablo3DetailedFollowersItems> GetDetailedFollowersItems(string accessToken, string region, string account, ulong heroId, string locale = "en_US") {
-			return await this.Get<Diablo3DetailedFollowersItems>(
+			return await this.GetAsync<Diablo3DetailedFollowersItems>(
 				string.Format(
 					"https://{0}.api.blizzard.com/d3/profile/{1}/hero/{2}/follower-items?locale={3}&access_token={4}",
 					region, account.Replace("#", "%23"), heroId, locale, accessToken

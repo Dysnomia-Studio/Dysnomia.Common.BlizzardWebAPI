@@ -22,7 +22,7 @@ namespace Dysnomia.Common.BlizzardWebAPI {
 		/// <param name="profileId">You can retrieve these parameters by issuing a GetPlayerAccount request.</param>
 		/// <returns></returns>
 		public async Task<LegacyStarcraft2PlayerProfile> GetPlayerProfile(string accessToken, string region, int regionId, int realmId, ulong profileId) {
-			return await this.Get<LegacyStarcraft2PlayerProfile>(
+			return await this.GetAsync<LegacyStarcraft2PlayerProfile>(
 				string.Format(
 					"https://{0}.api.blizzard.com/sc2/legacy/profile/{1}/{2}/{3}?access_token={4}",
 					region, regionId, realmId, profileId, accessToken
